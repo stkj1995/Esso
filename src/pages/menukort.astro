@@ -3,6 +3,7 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import MenukortHero from "../components/sections/MenukortHero.astro";
 import CTASektion from '../components/basics/CTASektion.astro';
+import Formular from "../components/basics/Formular.astro";
 import { Image } from 'astro:assets';
 import menukortImage from "../assets/images/menukort.png";
 ---
@@ -23,6 +24,11 @@ import menukortImage from "../assets/images/menukort.png";
     </ul>
   </section>
 
+
   <!-- CTA sektion -->
   <CTASektion heading="Bestil nu" text="Se vores fulde menukort her" />
+
+ <!-- Kontaktformular -->
+    <Formular />
+
 </MainLayout>
