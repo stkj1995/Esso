@@ -1,34 +1,22 @@
 ---
-const { 
-  textMobile, 
-  textDesktop, 
-  link, 
-  backgroundColor, 
-  textColor, 
-  size, 
-  additionalClasses 
-} = Astro.props;
+const { textMobile, textDesktop, link, backgroundColor, textColor, size, additionalClasses } = Astro.props;
 ---
 
-<!-- Button for Desktop & Mobile -->
 <a href={link} 
-   class={`inline-block px-6 py-3 text-white rounded-lg ${backgroundColor} ${textColor} ${size} ${additionalClasses}`}>
-   
-   <!-- Desktop Version -->
-   <span class="hidden md:inline">{textDesktop}</span>
-   
-   <!-- Mobile Version -->
-   <span class="md:hidden">{textMobile}</span>
-
+   class={`block ${size === 'large' ? 'px-8 py-4' : 'px-6 py-3'} 
+          ${additionalClasses || ''} 
+          text-18 md:text-18 font-[700] md:font-[700]
+          transition-transform duration-300 transform 
+          rounded-[50px]
+          hover:scale-105
+          ${size === 'large' ? 'sm:px-8 sm:py-4' : 'sm:px-6 sm:py-3'}
+          sm:text-center
+          ${backgroundColor ? `bg-[${backgroundColor}]` : 'bg-blue-500'} 
+          ${textColor ? `text-[${textColor}]` : 'text-white'}`}>
+    
+    <!-- Tekst for mobil -->
+    <span class="block sm:hidden">{textMobile}</span>
+    
+    <!-- Tekst for desktop -->
+    <span class="hidden sm:block">{textDesktop}</span>
 </a>
-
-<!-- Denne kode bruges på siderne til knapper (varianter) -->
-<!-- <Button 
-  textMobile="Tilmeld dig" 
-  textDesktop="Tilmeld dig nyhedsbrev" 
-  link="/nyhedsbrev" 
-  backgroundColor="bg-blue-500" 
-  textColor="text-white" 
-  size="py-3 px-6" 
-  additionalClasses="hover:bg-blue-700" 
-/> -->
