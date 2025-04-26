@@ -3,10 +3,33 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Button from '../components//basics/Button.astro';
 import Link from '../components/basics/Link.astro';
 import CTASektion from '../components/basics/CTASektion.astro';
-
+import Aabningstider from '../components/sections/Aabningstider.astro';
+import ForsideHero from "../components/sections/ForsideHero.astro";
+import InstagramFeed from "../components/sections/InstagramFeed.astro";
+import KontaktHero from "../components/sections/KontaktHero.astro";
+import MenukortHero from "../components/sections/MenukortHero.astro";
+import OmOsHero from "../components/sections/OmOsHero.astro";
+import Samarbejder from "../components/sections/Samarbejder.astro";
 import { Image } from 'astro:assets';
 import thumbsup from "../assets/images/thumbsup.png";
 ---
-<MainLayout title="Titel">
+<MainLayout title="Esso">
+ <!-- Hero sektion -->
+ <ForsideHero />
 
+ <!-- Kort intro -->
+ <section>
+   <h2>Velkommen til Esso</h2>
+   <p>Din hyggelige café og kreative space.</p>
+ </section>
+
+ <!-- Sektion for samarbejdspartnere -->
+ <Samarbejder />
+
+ <!-- Instagram Feed -->
+ <InstagramFeed />
+
+ <!-- CTA sektion -->
+ <CTASektion heading="Tilmeld dig vores nyhedsbrev" text="Få de nyeste opdateringer!" />
+ <Aabningstider />
 </MainLayout>
