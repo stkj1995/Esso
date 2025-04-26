@@ -1,0 +1,22 @@
+---
+// Importer nødvendige komponenter
+import MainLayout from "../layouts/MainLayout.astro";
+import KontaktHero from "../components/sections/KontaktHero.astro";
+import Formular from "../components/basics/Formular.astro";
+import CTASektion from "../components/basics/CTASektion.astro";
+import Aabningstider from '../components/sections/Aabningstider.astro';
+---
+
+<MainLayout title="Kontakt - Esso Café">
+  <!-- Hero sektion -->
+  <KontaktHero />
+
+  <!-- Kontaktformular -->
+  <Formular />
+
+  <!-- Åbningstider -->
+  <Aabningstider />
+
+  <!-- CTA sektion -->
+  <CTASektion heading="Besøg os" text="Se åbningstider eller Find os her" />
+</MainLayout>
