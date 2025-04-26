@@ -1,0 +1,28 @@
+---
+// Importer nødvendige komponenter
+import MainLayout from "../layouts/MainLayout.astro";
+import OmOsHero from "../components/sections/OmOsHero.astro";
+import CTASektion from '../components/basics/CTASektion.astro';
+---
+
+<MainLayout title="Om os - Esso Café">
+  <!-- Hero sektion -->
+  <OmOsHero />
+
+  <!-- Om Esso sektion -->
+  <section>
+    <h2>Hvordan Esso startede</h2>
+    <p>Esso blev grundlagt med en vision om at skabe et kreativt space...</p>
+  </section>
+
+  <!-- Kontaktinfo -->
+  <section>
+    <h3>Kontaktinfo</h3>
+    <p>E-mail: essocph@gmail.com</p>
+    <p>Telefon: +45 60 67 08 81</p>
+    <p>Adresse: Vigerslev Allé 36, st., dør 1</p>
+  </section>
+
+  <!-- CTA sektion -->
+  <CTASektion heading="Læs mere om os" text="Find ud af, hvordan vi skaber en unik oplevelse" />
+</MainLayout>
