@@ -1,0 +1,28 @@
+---
+// Importer nødvendige komponenter
+import MainLayout from "../layouts/MainLayout.astro";
+import MenukortHero from "../components/sections/MenukortHero.astro";
+import CTASektion from '../components/basics/CTASektion.astro';
+import { Image } from 'astro:assets';
+import menukortImage from "../assets/images/menukort.png";
+---
+
+<MainLayout title="Menukort - Esso Café">
+  <!-- Hero sektion -->
+  <MenukortHero />
+
+  <!-- Menu oversigt -->
+  <section>
+    <h2>Vores Menukort</h2>
+    <ul>
+      <li>Varme drikke</li>
+      <li>Kager/Wienerbrød</li>
+      <li>Mad</li>
+      <li>Vin og Øl</li>
+      <li>Kolde drikke</li>
+    </ul>
+  </section>
+
+  <!-- CTA sektion -->
+  <CTASektion heading="Bestil nu" text="Se vores fulde menukort her" />
+</MainLayout>
