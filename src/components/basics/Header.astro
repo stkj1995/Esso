@@ -1,32 +1,54 @@
 ---
-import Image from "astro/components/Image.astro"
-import logo from '../assets/images/logo.webp'
+import Image from "astro/components/Image.astro";
+import logo from '../assets/images/logo.webp';
 ---
 
-
-<!-- Navigation (desktop) -->
-
-
-
-<!-- Logo (synligt på desktop) -->
-
-
-
-
-
-<div class="max-w-screen-xl mx-auto text-white">
-    Header/Navigation
-</div>
+<header class="bg-white shadow-md">
+  <!-- Desktop Header -->
+  <div class="container mx-auto flex justify-between items-center py-4 md:flex-row flex-col">
     
+    <!-- Logo (synligt på desktop) -->
+    <div class="flex justify-between items-center w-full md:w-auto">
+      <!-- <a href="/">
+        <Image src={logo} alt="Esso Café Logo" class="h-10" />
+      </a> -->
+    </div>
 
-<!-- Burgermenu (mobil) -->
+    <!-- Navigation (desktop) -->
+    <nav class="hidden md:flex flex-grow justify-end space-x-8">
+      <ul class="flex space-x-6">
+        <li><a href="/" class="text-lg hover:text-blue-500">Forside</a></li>
+        <li><a href="/menukort" class="text-lg hover:text-blue-500">Menukort</a></li>
+        <li><a href="/omos" class="text-lg hover:text-blue-500">Om Os</a></li>
+        <li><a href="/kontakt" class="text-lg hover:text-blue-500">Kontakt</a></li>
+      </ul>
+    </nav>
+  </div>
 
-<!-- Logo (synligt på mobil) -->
+  <!-- Mobile Header (Burgermenu) -->
+  <div class="md:hidden flex justify-between items-center py-4 px-6">
+    <!-- Logo (synligt på mobil) -->
+    <div>
+      <!-- <a href="/">
+        <Image src={logo} alt="Esso Café Logo" class="h-10" />
+      </a> -->
+    </div>
+    
+    <!-- Mobile Burger Menu Icon -->
+    <button class="text-gray-800 focus:outline-none" aria-label="Open Menu">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
+  </div>
 
-
-
-<!-- Burgermenu knap (mobil) -->
-
-<!-- Knap (X) -->
-
-<!-- Links -->
+  <!-- Mobile Menu Dropdown (hidden by default) -->
+  <nav class="md:hidden hidden mobile-menu mt-4">
+    <ul class="space-y-4 text-center">
+      <li><a href="/" class="block text-lg py-2">Forside</a></li>
+      <li><a href="/menukort" class="block text-lg py-2">Menukort</a></li>
+      <li><a href="/omos" class="block text-lg py-2">Om Os</a></li>
+      <li><a href="/kontakt" class="block text-lg py-2">Kontakt</a></li>
+    </ul>
+  </nav>
+</header>
