@@ -1,8 +1,34 @@
 ---
-const { textMobile, textDesktop, link, backgroundColor, textColor, size, additionalClasses } = Astro.props;
+const { 
+  textMobile, 
+  textDesktop, 
+  link, 
+  backgroundColor, 
+  textColor, 
+  size, 
+  additionalClasses 
+} = Astro.props;
 ---
 
-<!-- Knapvarianter -->
-<div>
-    <button class="border-2 border-black"><slot /></button>
-</div>
+<!-- Button for Desktop & Mobile -->
+<a href={link} 
+   class={`inline-block px-6 py-3 text-white rounded-lg ${backgroundColor} ${textColor} ${size} ${additionalClasses}`}>
+   
+   <!-- Desktop Version -->
+   <span class="hidden md:inline">{textDesktop}</span>
+   
+   <!-- Mobile Version -->
+   <span class="md:hidden">{textMobile}</span>
+
+</a>
+
+<!-- Denne kode bruges på siderne til knapper (varianter) -->
+<!-- <Button 
+  textMobile="Tilmeld dig" 
+  textDesktop="Tilmeld dig nyhedsbrev" 
+  link="/nyhedsbrev" 
+  backgroundColor="bg-blue-500" 
+  textColor="text-white" 
+  size="py-3 px-6" 
+  additionalClasses="hover:bg-blue-700" 
+/> -->
