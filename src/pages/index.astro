@@ -8,30 +8,37 @@ import { Image } from 'astro:assets';
 import thumbsup from "../assets/images/thumbsup.png";
 ---
 <MainLayout title="Esso">
- <!-- Hero sektion -->
 
+  <!-- Hero med stemningsvideo -->
+  <section>
+    <h2>Stemningsvideo + logo </h2>
+  </section>
 
- <!-- Kort intro -->
+ <!-- Kort intro og billeder -->
  <section>
    <h2>Velkommen til Esso</h2>
    <p>Din hyggelige café og kreative space.</p>
  </section>
 
- <!-- Sektion for samarbejdspartnere -->
-
-
-<!-- Sektion for events -->
-
-
- <!-- Instagram Feed -->
-
- 
-
  <!-- CTA sektion -->
- <CTASektion heading="Dette er en CTA-sektion fx til menukort (makro)" text="Få de nyeste opdateringer!" />
+ <CTASektion heading="Dette er en CTA-sektion fx til menukort (makro)" text="Se vores menukort her" />
 
+ <!-- Afsnit om Esso + CTA-knap (mikro) til Om os -->
+ <section>
+  <h2>Mikrokonvertering: Kort om Esso og CTA til Om os, fx "Læs mere om os"</h2>
+</section>
+ 
+ <!-- Afsnit om fysiske salgsprodukter + CTA-knap (makro) til Menukort -->
+ <section>
+  <h2>Makrokonvertering: Kort om produkter og CTA til Menukort, fx "Se menukort"</h2>
+</section>
+ 
+ <!-- Instagram Feed -->
+ <section>
+  <h2>Sektion med Instagram-feed (galleri)</h2>
+</section>
 
- <!-- Kontaktformular -->
+ <!-- Nyhedsbrev: Kontaktformular med CTA-knap -->
   <Formular />
 
 </MainLayout>
