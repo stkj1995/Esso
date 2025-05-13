@@ -6,7 +6,7 @@ import 'animate.css';
 
 const { title = "Esso Café", description = "Velkommen til Esso Café." } = Astro.props;
 ---
-
+<!-- husk meta beskrivelse  -->
 <html lang="da">
   <head>
     <meta charset="utf-8" />
@@ -17,8 +17,8 @@ const { title = "Esso Café", description = "Velkommen til Esso Café." } = Astr
     <meta name="description" content={description} />
   </head>
 
-  <body class="bg-neutral-100 text-neutral-900">
-    <header class="bg-blue-500">
+  <body class="bg-color-hvid text-neutral-900">
+    <header>
       <Header />
     </header>
 
@@ -26,7 +26,7 @@ const { title = "Esso Café", description = "Velkommen til Esso Café." } = Astr
       <slot />
     </main>
 
-    <footer class="bg-blue-500">
+    <footer class="bg-red-300">
       <Footer />
     </footer>
   </body>
