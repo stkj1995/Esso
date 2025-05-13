@@ -7,9 +7,28 @@ export default {
   /* Primitives - Mode 1 */
   theme: {
     fontFamily: {
-      //     sans: ['Prompt', 'sans-serif'],
-      //     'display': ['Courier', 'monospace'], /* eksempel på ekstra font */
-      //
+      sans: ["Livvic", "sans-serif"],
+      display: ["Eb Garamond", "serif"],
+    },
+
+    fontSize: {
+      18: ["18px"],
+      20: ["20px"],
+      28: ["28px"],
+      36: ["36px"],
+      44: ["44px"],
+      52: ["36px"],
+    },
+
+    lineHeight: {
+      28: ["28px"],
+      38: ["38px"],
+    },
+
+    fontWeight: {
+      regular: "400",
+      medium: "500",
+      semibold: "600",
     },
 
     extend: {
