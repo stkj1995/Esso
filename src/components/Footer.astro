@@ -2,6 +2,7 @@
 import Button from './Button.astro';
 import { Image } from 'astro:assets';
 import ESSOLogo from '../assets/images/ESSO_logo.webp';
+import Iconpilop from '../assets/images/icon_pilop.webp';
 ---
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
@@ -13,9 +14,10 @@ import ESSOLogo from '../assets/images/ESSO_logo.webp';
             <Image src={ESSOLogo} alt="ESSO logo" class="md:w-32 md:h-32 w-20 h-20 rounded-full object-cover" />
           </a>
         </div>
+      <hr class="max-w-xs mt-16 mb-8 md:mb-16 md:max-w-7xl mx-auto border-t-1 border-color-hvid">
 
 <footer class="text-20 flex flex-col space-y-spacing-3xl-(mobil) md:flex-row md:space-y-0 md:space-x-spacing-8xl">
-    
+     
   <!-- Adresse -->
   <div class="text-16 md:w-80 mx-10 my-10">
     <h1 class="text-52 md:text-44 font-EBGaramond mb-spacing-sm-(mobil) md:mb-spacing-sm">Esso Cph</h1>
@@ -39,6 +41,11 @@ import ESSOLogo from '../assets/images/ESSO_logo.webp';
       <ion-icon name="logo-facebook"></ion-icon>
       <ion-icon name="logo-instagram"></ion-icon>
     </div>
+  </div>
+
+    <!-- Pil ikon i højre hjørne -->
+  <div class="absolute bottom-4 right-4">
+    <img src="/src/assets/images/icon-pilop.webp" alt="Pil ikon" class="w-10 h-10 "/>
   </div>
 </footer>
 
