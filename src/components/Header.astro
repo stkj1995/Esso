@@ -2,37 +2,43 @@
 import Image from "astro/components/Image.astro";
 import ESSOLogo from '../assets/images/ESSO_logo.webp';
 ---
-
 <header class="bg-color-creme">
   <!-- Header container -->
-  <div class="flex justify-between items-center w-full p-4">
+  <div class="flex justify-between items-center w-full p-4 relative">
 
-    <!-- Logo -->
-    <div class="flex items-center">
+    <!-- Logo (kun desktop) -->
+    <div class="flex items-center md:flex-1">
       <a href="/">
-        <Image src={ESSOLogo} alt="ESSO logo" class="ml-10 w-20 h-20 rounded-full object-cover" />
+        <Image src={ESSOLogo} alt="ESSO logo" class="ml-12 w-20 h-20 rounded-full object-cover mt-4" />
       </a>
     </div>
 
     <!-- Mobile menu (vises som standard på mobil) -->
     <div class="flex md:hidden mr-4" x-data="{ open: false }">
       <!-- Burger Menu Knappen -->
-      <button @click="open = !open" class="text-28 font-medium text-color-mørkebrun w-[20%]">
+      <button @click="open = !open" class="text-28 font-medium text-color-mørkebrun w-[20%] z-20 mr-5">
         ☰
       </button>
 
       <!-- Mobile Navigation -->
       <div x-show="open" x-transition class="fixed top-0 left-0 w-full h-full bg-white text-color-mørkebrun z-50 p-8">
-        
+
+        <!-- Logo inside the mobile menu -->
+        <div class="flex items-start justify-start ml-8">
+          <a href="/">
+            <Image src={ESSOLogo} alt="ESSO logo" class="w-20 h-20 rounded-full object-cover" />
+          </a>
+        </div>
+
         <!-- Luk-knap (X) -->
-        <button @click="open = false" class="absolute top-8 right-8 text-28 font-semibold">
+        <button @click="open = false" class="absolute top-8 right-8 text-28 font-semibold z-20 mr-5 mt-2">
           ✕
         </button>
 
         <ul class="font-EBGaramond font-medium text-36 space-y-[90px] text-center mt-20">
-          <li><a href="/menu" class=" hover:text-color-lysebrun" @click="open = false">Menu</a></li>
-          <li><a href="/omos" class=" hover:text-color-lysebrun" @click="open = false">Om os</a></li>
-          <li><a href="/kontakt" class=" hover:text-color-lysebrun" @click="open = false">Kontakt</a></li>
+          <li><a href="/menu" class="hover:text-color-lysebrun" @click="open = false">Menu</a></li>
+          <li><a href="/omos" class="hover:text-color-lysebrun" @click="open = false">Om os</a></li>
+          <li><a href="/kontakt" class="hover:text-color-lysebrun" @click="open = false">Kontakt</a></li>
         </ul>
       </div>
     </div>
@@ -46,33 +52,5 @@ import ESSOLogo from '../assets/images/ESSO_logo.webp';
       </ul>
     </nav>
 
+  </div>
 </header>
-
-
-  <!-- Mobile Header (Burgermenu) -->
-  <!-- <div class="md:hidden flex justify-between items-center py-4 px-6"> -->
-    <!-- Logo (synligt på mobil) -->
-    <!-- <div>
-      <a href="/">
-       <Image src={ESSOLogo} alt="ESSO logo" class="ml-14 w-20 h-20 rounded-[50%] object-cover" />
-      </a>
-    </div> -->
-    
-    <!-- Mobile Burger Menu Icon -->
-    <!-- <button class="text-gray-800 focus:outline-none" aria-label="Open Menu">
-      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-      </svg>
-    </button>
-  </div> -->
-
-  <!-- Mobile Menu Dropdown (hidden by default) -->
-  <!-- <nav class="md:hidden hidden mobile-menu mt-4">
-    <ul class="space-y-4 text-center">
-      <li><a href="/" class="block text-lg py-2">Forside</a></li>
-      <li><a href="/menu" class="block text-lg py-2">Menu</a></li>
-      <li><a href="/omos" class="block text-lg py-2">Om os</a></li>
-      <li><a href="/kontakt" class="block text-lg py-2">Kontakt</a></li>
-    </ul>
-  </nav>
-</header> -->
