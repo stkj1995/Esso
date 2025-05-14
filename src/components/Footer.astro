@@ -7,51 +7,38 @@ import ESSOLogo from '../assets/images/ESSO_logo.webp';
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 
 
-<!-- Overskrift -->
+  <!-- Logo inside the mobile menu -->
+        <div class="flex items-start justify-start ml-8 pt-12">
+          <a href="/">
+            <Image src={ESSOLogo} alt="ESSO logo" class="md:w-32 md:h-32 w-20 h-20 rounded-full object-cover" />
+          </a>
+        </div>
 
-<!-- Brødtekst -->
-
-<!-- Billeder -->
-
-<!-- CTA-knap -->
-
-<!-- Footer-tekst -->
-      
-<section class="bg-color-mørkebrun text-white pt-20 px-20 pb-5 justify-center " >
-
-        <div class="flex items-center md:flex-1">
-      <a href="/">
-        <Image src={ESSOLogo} alt="ESSO logo" class="ml-12 w-32 h-32 rounded-full object-cover mt-4" />
-      </a>
-    </div>
-
-<hr class="mt-12 mb-16">
-
-
-<div class="text-20 flex flex-col md:flex-row space-x-spacing-8xl">
-  <div class="md:w-96 text-16">
-<h1 class="text-52 md:text-44 font-EBGaramond mb-6">Esso Cph</h1>
-<p class="font-Livvic">Vigerslev Allé 36, st., dør 1</p>
-<p class="">2500 Valby</p>
-<p class="">essocph@gmail.com</p> 
-<p class="">+45 60 67 08 81</p>
-</div>
-
-<div class="md:w-96 text-16">
-<h3 class="text-52 md:text-44 font-EBGaramond mb-6">Åbningstider</h3>
-<p class="">Tirs - Søn: Kl. 09 - 17</p>
-<p class="">Lukket hver mandag</p>
-</div>
-
-<div class="md:w-96 text-16">
-<h3 class="text-52 md:text-44 font-EBGaramond mb-6">Følg os</h3>
-  <div class="flex flex-row gap-12">
- <ion-icon name="logo-facebook"></ion-icon>
-  <ion-icon name="logo-instagram"></ion-icon>
+<footer class="text-20 flex flex-col space-y-spacing-3xl-(mobil) md:flex-row md:space-y-0 md:space-x-spacing-8xl">
+    
+  <!-- Adresse -->
+  <div class="text-16 md:w-80 mx-10 my-10">
+    <h1 class="text-52 md:text-44 font-EBGaramond mb-spacing-sm-(mobil) md:mb-spacing-sm">Esso Cph</h1>
+    <p class="">Vigerslev Allé 36, st., dør 1</p>
+    <p>2500 Valby</p>
+    <p>essocph@gmail.com</p> 
+    <p>+45 60 67 08 81</p>
   </div>
-</div>
-</div>
 
+  <!-- Åbningstider -->
+  <div class="text-16 md:w-80 mx-10 my-10">
+    <h3 class="text-52 md:text-44 font-EBGaramond mb-spacing-sm-(mobil) md:mb-spacing-sm">Åbningstider</h3>
+    <p>Tirs - Søn: Kl. 09 - 17</p>
+    <p>Lukket hver mandag</p>
+  </div>
 
-</section>
+  <!-- SoMe -->
+  <div class="text-16 md:w-80 mx-10 my-10">
+    <h3 class="text-52 md:text-44 font-EBGaramond mb-spacing-sm-(mobil) md:mb-spacing-sm">Følg os</h3>
+    <div class="flex flex-row gap-spacing-s-(mobil) md:gap-spacing-sm">
+      <ion-icon name="logo-facebook"></ion-icon>
+      <ion-icon name="logo-instagram"></ion-icon>
+    </div>
+  </div>
+</footer>
 
