@@ -44,7 +44,7 @@ export default {
         "border-2": "2px",
       },
 
-      borderadius: {
+      borderRadius: {
         "border-radius-0": "0px",
         "border-radius-25": "25px",
         "border-radius-30": "30px",
