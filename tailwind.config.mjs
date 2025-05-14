@@ -72,7 +72,7 @@ export default {
         "spacing-ml": "48px",
         "spacing-lg": "65px",
         "spacing-xl": "80px",
-        "2xl": "90px",
+        "spacing-2xl": "90px",
         "spacing-3xl": "120px",
         "spacing-4xl": "130px",
         "spacing-5xl": "142px",
