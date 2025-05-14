@@ -2,7 +2,7 @@
 import Button from './Button.astro';
 import { Image } from 'astro:assets';
 import ESSOLogo from '../assets/images/ESSO_logo.webp';
-import Iconpilop from '../assets/images/icon_pilop.webp';
+import IconPilop from '/src/assets/images/icon_pilop.webp';
 ---
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
@@ -44,8 +44,9 @@ import Iconpilop from '../assets/images/icon_pilop.webp';
   </div>
 
     <!-- Pil ikon i højre hjørne -->
-  <div class="absolute bottom-4 right-4">
-    <img src="/src/assets/images/icon-pilop.webp" alt="Pil ikon" class="w-10 h-10 "/>
-  </div>
+ <div class="absolute bottom-4 right-4 z-10">
+  <img src="/src/assets/images/icon_pilop.webp" alt="Pil ikon" class="w-10 h-10 filter brightness-0 invert z-50" />
+</div>
+
 </footer>
 
