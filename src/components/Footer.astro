@@ -9,17 +9,17 @@ import IconPilop from '/src/assets/images/icon_pilop.webp';
 
 
   <!-- Logo inside the mobile menu -->
-        <div class="flex items-start justify-start ml-8 pt-12">
+        <div class="flex items-start justify-start md:ml-28 ml-8 pt-12">
           <a href="/">
             <Image src={ESSOLogo} alt="ESSO logo" class="md:w-32 md:h-32 w-20 h-20 rounded-full object-cover" />
           </a>
         </div>
       <hr class="max-w-xs mt-16 mb-8 md:mb-16 md:max-w-7xl mx-auto border-t-1 border-color-hvid">
 
-<footer class="text-20 flex flex-col space-y-spacing-3xl-(mobil) md:flex-row md:space-y-0 md:space-x-spacing-8xl">
+<footer class="justify-center md:ml-20 md:mr-20 text-20 flex flex-col space-y-spacing-3xl-(mobil) md:flex-row md:space-y-0 md:space-x-spacing-8xl">
      
   <!-- Adresse -->
-  <div class="text-16 md:w-80 mx-10 my-10">
+  <div class="text-16 md:w-80 mx-10 my-0">
     <h1 class="text-52 md:text-44 font-EBGaramond mb-spacing-sm-(mobil) md:mb-spacing-sm">Esso Cph</h1>
     <p class="">Vigerslev Allé 36, st., dør 1</p>
     <p>2500 Valby</p>
@@ -43,10 +43,12 @@ import IconPilop from '/src/assets/images/icon_pilop.webp';
     </div>
   </div>
 
-    <!-- Pil ikon i højre hjørne -->
- <div class="absolute bottom-4 right-4 z-10">
-  <img src="/src/assets/images/icon_pilop.webp" alt="Pil ikon" class="w-10 h-10 filter brightness-0 invert z-50" />
+<!-- Pil ikon i højre hjørne -->
+<div class="absolute bottom-0 right-10 z-10">
+  <Image src={IconPilop} alt="Pil ikon" class="w-4 h-8 z-50" />
 </div>
+
+
 
 </footer>
 
