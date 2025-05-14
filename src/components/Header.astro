@@ -3,7 +3,6 @@ import Image from "astro/components/Image.astro";
 import ESSOLogo from '../assets/images/ESSO_logo.webp';
 ---
 
-
 <header class="bg-color-creme">
   <!-- Header container -->
   <div class="flex justify-between items-center w-full p-4">
@@ -18,13 +17,19 @@ import ESSOLogo from '../assets/images/ESSO_logo.webp';
     <!-- Mobile menu (vises som standard på mobil) -->
     <div class="flex md:hidden mr-4" x-data="{ open: false }">
       <!-- Burger Menu Knappen -->
-      <button @click="open = !open" class="text-20 font-semibold text-color-mørkebrun">
+      <button @click="open = !open" class="text-28 font-medium text-color-mørkebrun w-[20%]">
         ☰
       </button>
 
       <!-- Mobile Navigation -->
       <div x-show="open" x-transition class="fixed top-0 left-0 w-full h-full bg-white text-color-mørkebrun z-50 p-8">
-        <ul class=" font-EBGaramond font-medium text-36 space-y-[90px] text-center">
+        
+        <!-- Luk-knap (X) -->
+        <button @click="open = false" class="absolute top-8 right-8 text-28 font-semibold">
+          ✕
+        </button>
+
+        <ul class="font-EBGaramond font-medium text-36 space-y-[90px] text-center mt-20">
           <li><a href="/menu" class=" hover:text-color-lysebrun" @click="open = false">Menu</a></li>
           <li><a href="/omos" class=" hover:text-color-lysebrun" @click="open = false">Om os</a></li>
           <li><a href="/kontakt" class=" hover:text-color-lysebrun" @click="open = false">Kontakt</a></li>
@@ -32,15 +37,14 @@ import ESSOLogo from '../assets/images/ESSO_logo.webp';
       </div>
     </div>
 
-
     <!-- Navigation (kun desktop) -->
-  <nav class="hidden md:flex items-center justify-end flex-1">
-    <ul class="flex gap-[90px] font-EBGaramond font-medium text-color-mørkebrun text-28 text-center mr-16">
-      <li><a href="/menu" class="hover:text-color-lysebrun">Menu</a></li>
-      <li><a href="/omos" class="hover:text-color-lysebrun">Om os</a></li>
-      <li><a href="/kontakt" class="hover:text-color-lysebrun">Kontakt</a></li>
-    </ul>
-  </nav>
+    <nav class="hidden md:flex items-center justify-end flex-1">
+      <ul class="flex gap-[90px] font-EBGaramond font-medium text-color-mørkebrun text-28 text-center mr-16">
+        <li><a href="/menu" class="hover:text-color-lysebrun">Menu</a></li>
+        <li><a href="/omos" class="hover:text-color-lysebrun">Om os</a></li>
+        <li><a href="/kontakt" class="hover:text-color-lysebrun">Kontakt</a></li>
+      </ul>
+    </nav>
 
 </header>
 
