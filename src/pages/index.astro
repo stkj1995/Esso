@@ -9,13 +9,12 @@ import ForsideKaffe from '../assets/images/forside_kaffe.webp';
 <MainLayout title="Forside">
 
   <!-- Hero med stemningsvideo -->
- 
  </section>
   <div class="video">
         <video src="/ny-esso-hero-stemning.mp4" autoplay loop muted class="h-screen object-cover pb-spacing-5xl space-y-spacing-ml-(mobil) md:w-screen md:space-y-spacing-6xl"></video>
       </div>    
 
-       <div class="absolute bottom-36 left-1/2 transform -translate-x-1/2 z-10">
+       <div class="absolute bottom-40 left-1/2 transform -translate-x-1/2 z-10">
     <img
       src="/pilned.svg"
       alt="Scroll ned"
@@ -24,19 +23,29 @@ import ForsideKaffe from '../assets/images/forside_kaffe.webp';
   </div>
   </section>
 
-  <!-- Kort intro og billeder -->
-  <section class="flex flex-col md:flex-row py-20 md:px-32 gap-28 items-center">
+ <!-- Kort intro og billeder -->
+<section class="flex flex-col md:flex-row py-20 px-0 md:pl-20 md:space-y-spacing-xs md:space-x-spacing-5xl space-y-spacing-2xl items-center max-w-7xl mx-auto">
   <div>
-  <Image src={ForsideKaffe} alt='en kaffe bliver lavet' class="h-[380px] w-[380px] object-cover object-[40%_88%] rounded-border-radius-25 md:h-[500px] md:w-[500px]"/>
+    <Image
+      src={ForsideKaffe}
+      alt="en kaffe bliver lavet"
+      class="h-[380px] w-[380px] object-cover object-[40%_88%] rounded-border-radius-25 md:h-[500px] md:w-[500px]"
+    />
   </div>
 
-  <div class="md:w-2/5 mx-20 ">
-  <h1 class="md:w-4/5 text-left text-44 mb-8 font-EBGaramond font-medium leading-38 space-x-spacing-6xl md:text-52 -">Velkommen til Esso - en café med mere på hjerte</h1>
-  <p class="w-4/5 text-left font-LivvicRegular text-18 font-regular leading-28 md:text-18 md:w-2/7 ">Hos Esso handler det ikke om at skynde sig. Vi inviterer dig ind i et rum, hvor stemningen er rolig, kaffen er god, og detaljerne tæller.
-  Alt hos os er lavet fra bunden – med kærlighed og fokus på kvalitet. Kom og smag vores hjemmelavede toast, kager og forfriskende drikke – vi lover, du kan smage forskellen. <br> <br>
+  <div class="md:ml-10 md:w-2/5 w-4/5">
+    <h1 class="text-left text-44 mb-8 font-EBGaramond font-medium leading-38 space-x-spacing-6xl md:text-52 items-center">
+      Velkommen til Esso - en café med mere på hjerte
+    </h1>
+    <p class="text-left font-LivvicRegular text-18 font-regular leading-28 md:text-18">
+      Hos Esso handler det ikke om at skynde sig. Vi inviterer dig ind i et rum, hvor stemningen er rolig, kaffen er god, og detaljerne tæller.
+      Alt hos os er lavet fra bunden – med kærlighed og fokus på kvalitet. Kom og smag vores hjemmelavede toast, kager og forfriskende drikke – vi lover, du kan smage forskellen. <br /><br />
 
-  Om du er på udkig efter en stille stund eller lidt luft i en travl hverdag, er du velkommen her. Her er der plads til både dem, der kommer alene med en bog under armen, og dem, der kommer for at dele grin over en god kop kaffe.</p>
-  </section>
+      Om du er på udkig efter en stille stund eller lidt luft i en travl hverdag, er du velkommen her. Her er der plads til både dem, der kommer alene med en bog under armen, og dem, der kommer for at dele grin over en god kop kaffe.
+    </p>
+  </div>
+</section>
+
 
  <!-- CTA -->
 
