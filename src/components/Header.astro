@@ -1,8 +1,10 @@
 ---
 import Image from "astro/components/Image.astro";
 import ESSOLogo from '../assets/images/ESSO_logo.webp';
+
+const isHome = Astro.url.pathname === "/";
 ---
-<header class="bg-color-creme">
+<header class={`${isHome ? '!bg-transparent' : 'bg-color-creme'} z-50 absolute top-0 left-0 w-full`}>
   <!-- Header container -->
   <div class="flex justify-between items-center w-full p-2 relative">
 
