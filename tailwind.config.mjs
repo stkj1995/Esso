@@ -7,7 +7,7 @@ export default {
   /* Primitives - Mode 1 */
   theme: {
     fontFamily: {
-      Livvic: ["Livvic-Regular", "sans-serif"],
+      Livvic: ["LivvicRegular", "sans-serif"],
       EBGaramond: ["EbGaramond-VariableFont", "serif"],
     },
 
