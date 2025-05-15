@@ -8,6 +8,7 @@ import ForsideKaffe from '../assets/images/forside_kaffe.webp';
 import ImgRaekke from '../assets/images/imgraekke.webp';
 import Boller from '../assets/images/boller.webp';
 import CookieLemonade from '../assets/images/cookie_lemonade.webp';
+import ESSOfacade from '../assets/images/esso_facade.webp';
 
 const {variant= "primary" , size= "medium"} = Astro.props;
 
@@ -108,7 +109,7 @@ const sizeClasses = {
     </div>
   </div>
 
-  <!-- Mobil-visning: horisontal scroll -->
+  <!-- Mobil-visning: horisontal scroll - ÆNDRE HORISONTAL SCROLL -->
   <div class="md:hidden flex overflow-x-auto space-x-4 px-4">
     <div class="flex-shrink-0">
       <Image src={ImgRaekke} alt="Række kaffe" class="h-[300px] w-[250px] object-cover rounded-border-radius-25" />
@@ -143,11 +144,33 @@ const sizeClasses = {
 
   </section>
 
-
  <!-- Afsnit om Esso + CTA-knap (mikro) til Om os -->
- <!-- <section>
-  <h2>Mikrokonvertering: Kort om Esso og CTA til Om os, fx "Læs mere om os"</h2>
-</section> -->
+<section class="bg-color-creme w-full flex flex-col md:flex-row py-10 px-0 md:pl-10 md:space-y-spacing-xs md:space-x-spacing-6xl space-y-spacing-2xl items-center">
+  <div>
+    <Image
+      src={ESSOfacade}
+      alt="en kaffe bliver lavet"
+      class="h-[380px] w-[380px] object-cover object-[40%_88%] rounded-border-radius-25 md:h-[500px] md:w-[500px]"
+    />
+  </div>
+
+  <div class="md:ml-10 md:w-2/5 w-4/5">
+    <h1 class="text-left text-44 mb-8 font-EBGaramond font-medium leading-38 space-x-spacing-6xl md:text-52 items-center">
+      Din lokale café i Valby
+    </h1>
+    <p class="text-left font-LivvicRegular text-18 font-regular leading-28 md:text-18 mb-10">
+    Hos Esso finder du mere end bare god kaffe. Vi har skabt et sted med kvalitet og atmosfære – hvor alle er velkomne, og hverdagen får lov at trække vejret. Kom forbi og mærk stemningen selv. <br>
+  Her handler det om ægthed. Et sted, hvor mennesker mødes, ideer opstår og stemninger får lov at gro.
+    </p>
+
+     <!-- CTA-knap - ÆNDRE KNAPFARVE/VARIANT -->
+      <a href="/omos">
+      <button class:list={[buttonStyling, variantClasses[variant], sizeClasses[size]]}>
+       Læs mere om os
+      </button>
+    </a>
+  </div>
+</section>
  
  <!-- Afsnit om fysiske salgsprodukter + CTA-knap (makro) til Menu-->
  <!-- <section>
