@@ -3,52 +3,68 @@ import Button from './Button.astro';
 import { Image } from 'astro:assets';
 import ESSOLogo from '../assets/images/ESSO_logo.webp';
 import IconPilop from '/src/assets/images/icon_pilop.webp';
+import InstagramIkon from '/src/assets/images/Instagram_ikon.webp';
+import FacebookIkon from '/src/assets/images/Facebook-ikon.webp';
 ---
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+ 
+<footer class="relative justify-center md:ml-20 md:mr-20 text-18 flex flex-col space-y-spacing-1xl-(mobil) md:flex-row md:space-y-0 md:space-x-spacing-7xl"></footer>
+<!-- Logo -->
+  <div class="flex items-start justify-start pl-5 mx-5 pt-5 md:pt-5 md:ml-28">
+    <a href="/">
+      <Image src={ESSOLogo} alt="ESSO logo" class="md:w-32 md:h-32 w-20 h-20 rounded-full object-cover" />
+    </a>
+  </div>
 
+    <!-- Vandret streg -->
+  <hr class="max-w-xs mt-5 mb-5 md:mb-5 md:max-w-7xl mx-auto border-t-1 border-color-hvid">
+ 
+  <div class="relative justify-center md:pb-20 md:ml-20 md:mr-20 text-18 flex flex-col space-y-spacing-2xl-(mobil) md:flex-row md:space-y-0 md:space-x-spacing-7xl">
 
-  <!-- Logo inside the mobile menu -->
-        <div class="flex items-start justify-start md:ml-28 ml-8 pt-12">
-          <a href="/">
-            <Image src={ESSOLogo} alt="ESSO logo" class="md:w-32 md:h-32 w-20 h-20 rounded-full object-cover" />
-          </a>
-        </div>
-      <hr class="max-w-xs mt-16 mb-8 md:mb-16 md:max-w-7xl mx-auto border-t-1 border-color-hvid">
-
-<footer class="justify-center md:ml-20 md:mr-20 text-20 flex flex-col space-y-spacing-3xl-(mobil) md:flex-row md:space-y-0 md:space-x-spacing-8xl">
-     
   <!-- Adresse -->
-  <div class="text-16 md:w-80 mx-10 my-0">
+  <div class="text-18 md:w-80 mx-14 my-0">
     <h1 class="text-52 md:text-44 font-EBGaramond mb-spacing-sm-(mobil) md:mb-spacing-sm">Esso Cph</h1>
-    <p class="">Vigerslev Allé 36, st., dør 1</p>
-    <p>2500 Valby</p>
-    <p>essocph@gmail.com</p> 
-    <p>+45 60 67 08 81</p>
+    <p class="font-Livvic text-18">Vigerslev Allé 36, st., dør 1</p>
+    <p class="font-Livvic text-18">2500 Valby</p>
+  <p class="font-Livvic text-18">
+  <a href="mailto:essocph@gmail.com" class="hover:underline ">
+    essocph@gmail.com
+  </a>
+</p>
+
+    <p class="font-Livvic text-18">+45 60 67 08 81</p>
   </div>
 
   <!-- Åbningstider -->
-  <div class="text-16 md:w-80 mx-10 my-10">
-    <h3 class="text-52 md:text-44 font-EBGaramond mb-spacing-sm-(mobil) md:mb-spacing-sm">Åbningstider</h3>
-    <p>Tirs - Søn: Kl. 09 - 17</p>
-    <p>Lukket hver mandag</p>
+  <div class="text-18 md:w-80 mx-14 my-0">
+    <h1 class="text-52 md:text-44 font-EBGaramond mb-spacing-sm-(mobil) md:mb-spacing-sm">Åbningstider</h1>
+    <p class="font-Livvic text-18">Tirs - Søn: Kl. 09 - 17</p>
+    <p class="font-Livvic text-18">Lukket hver mandag</p>
   </div>
 
   <!-- SoMe -->
-  <div class="text-16 md:w-80 mx-10 my-10">
-    <h3 class="text-52 md:text-44 font-EBGaramond mb-spacing-sm-(mobil) md:mb-spacing-sm">Følg os</h3>
-    <div class="flex flex-row gap-spacing-s-(mobil) md:gap-spacing-sm">
-      <ion-icon name="logo-facebook"></ion-icon>
-      <ion-icon name="logo-instagram"></ion-icon>
-    </div>
+    <div class="text-18 md:w-80 mx-14 my-0">
+  <h1 class="text-52 md:text-44 font-EBGaramond mb-spacing-sm-(mobil) md:mb-spacing-sm">Følg os</h1>
+ <div class="flex flex-row gap-spacing-sm-(mobil) md:gap-spacing-s mb-10">   
+  <a href="https://www.facebook.com/Realiserbar" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+    <Image src={FacebookIkon} alt="Facebook ikon" class="w-5 h-10 md:w-6 md:h-11 hover:opacity-80 transition-opacity duration-200" />
+  </a>
+  <a href="https://www.instagram.com/esso_cph/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+    <Image src={InstagramIkon} alt="Instagram ikon" class="mt-1 w-8 h-8 md:w-10 md:h-10 hover:opacity-80 transition-opacity duration-200" />
+  </a>  
   </div>
+</div>
 
-<!-- Pil ikon i højre hjørne -->
-<div class="absolute bottom-0 right-10 z-10">
-  <Image src={IconPilop} alt="Pil ikon" class="w-4 h-8 z-50" />
+<!-- Pil ikon i nederste højre hjørne -->
+<div class="absolute bottom-10 right-4 z-50">
+  <a href="#" aria-label="Scroll til toppen">
+    <Image src={IconPilop} alt="Pil ikon" class="w-4 h-8 z-50" />
+  </a>
+</div>
+
 </div>
 
 
 
-</footer>
 
