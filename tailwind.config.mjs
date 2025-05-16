@@ -17,7 +17,7 @@ export default {
       28: ["28px"],
       36: ["36px"],
       44: ["44px"],
-      52: ["36px"],
+      52: ["52px"],
     },
 
     lineHeight: {
