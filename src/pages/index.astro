@@ -88,7 +88,7 @@ const sizeClasses = {
         <Image
           src={ImgRaekke}
           alt="Række kaffe"
-          class="w-full h-[55%] object-cover rounded-border-radius-25"
+          class="w-full h-[50%] object-cover rounded-border-radius-25"
         />
       </div>
 
@@ -97,7 +97,7 @@ const sizeClasses = {
         <Image
           src={Boller}
           alt="Boller"
-          class="w-full h-[55%] object-cover rounded-border-radius-25"
+          class="w-full h-[50%] object-cover rounded-border-radius-25"
         />
       </div>
 
@@ -106,7 +106,7 @@ const sizeClasses = {
         <Image
           src={CookieLemonade}
           alt="Cookie og lemonade"
-          class="w-full h-[55%] object-cover rounded-border-radius-25"
+          class="w-full h-[50%] object-cover rounded-border-radius-25"
         />
       </div>
     </div>
@@ -146,19 +146,19 @@ const sizeClasses = {
     </section>
 
  <!-- Afsnit om Esso + CTA-knap (mikro) til Om os -->
-<section class="bg-color-creme w-full flex flex-col md:flex-row py-10 px-0 md:pl-10 md:space-y-spacing-xs md:space-x-spacing-6xl space-y-spacing-2xl items-center">
+<section class="bg-color-creme min-h-screen items-center justify-center flex flex-col md:flex-row md:space-x-spacing-5xl px-0 space-y-spacing-2xl w-full mx-auto">
   <div>
     <Image
       src={ESSOfacade}
       alt="en kaffe bliver lavet"
-      class="h-[380px] w-[380px] object-cover object-[40%_88%] rounded-border-radius-25 md:h-[400px] md:w-[500px] md:space-y-spacing-ml "
+      class="h-[300px] w-[380px] object-cover object-[40%_88%] rounded-border-radius-25 md:h-[400px] md:w-[580px] md:space-y-spacing-ml "
     />
   </div>
 
   <div class="md:ml-20 md:w-2/5 w-4/5">
-    <h1 class="text-left text-44 mb-8 font-EBGaramond font-medium leading-38 space-x-spacing-6xl md:text-52 items-center">
-      Din lokale café i Valby
-    </h1>
+    <h1 class="text-left text-44 mb-8 font-EBGaramond font-medium leading-38 md:text-52 md:w-4/5">
+    Din lokale café i Valby
+  </h1>
     <p class="text-left font-LivvicRegular text-18 font-regular leading-28 md:text-18 mb-10 md:w-4/5">
     Hos Esso finder du mere end bare god kaffe. Vi har skabt et sted med kvalitet og atmosfære – hvor alle er velkomne, og hverdagen får lov at trække vejret. Kom forbi og mærk stemningen selv. <br>
   Her handler det om ægthed. Et sted, hvor mennesker mødes, ideer opstår og stemninger får lov at gro.
@@ -170,44 +170,43 @@ const sizeClasses = {
     Læs mere om os
   </button>
 </a>
-
   </div>
 </section>
 
- <!-- Afsnit om smag + CTA-knap (makro) til Menu -->
-<section class="flex flex-col md:flex-row py-20 px-4 md:space-x-spacing-7xl space-y-spacing-2xl items-center w-full max-w-[1350px] mx-auto">
-  <div class="order-2 md:order-1">
+ <section class="bg-color-creme min-h-screen flex flex-col-reverse md:flex-row items-center justify-center md:space-x-spacing-5xl px-0 space-y-spacing-2xl md:space-y-0 w-full mx-auto">
+  <!-- Tekst -->
+  <div class="md:ml-20 md:w-2/5 w-4/5">
+    <h1 class="text-left text-44 mb-8 font-EBGaramond font-medium leading-38 md:text-52">
+     Smag du kan tage med hjem
+    </h1>
+    <p class="text-left font-LivvicRegular text-18 font-regular leading-28 md:text-18 mb-10">
+     Ud over frisklavet kaffe og hjemmelavet bagværk byder vi også på naturlige vine, nøje udvalgte produkter og små delikatesser. Alt er udvalgt med omtanke både til dig selv, til middagsbordet eller som en særlig gave. <br> Tag lidt af Esso med hjem og forlæng følelsen – også uden for caféens fysiske rum.
+    </p>
+
+    <!-- CTA-knap -->
+   <a href="/menu" >
+        <button class:list={[buttonStyling, variantClasses[variant], sizeClasses[size]]}>
+          Se caféens udvalg
+        </button>
+      </a>
+  </div>
+
+  <!-- Billeder -->
+  <div class="flex space-x-6 md:w-[580px] w-full justify-center">
     <Image
       src={Mexico}
       alt="en kaffe bliver lavet"
-      class="h-[180px] w-[180px] object-cover object-[40%_88%] rounded-border-radius-25 md:h-[200px] md:w-[200px] "
+      class="h-[300px] w-[180px] object-cover object-[40%_88%] rounded-border-radius-25 md:h-[400px] md:w-[280px]"
     />
-  </div>
-   <div class="order-2 md:order-1">
     <Image
       src={SolMaane}
-      alt="en kaffe bliver lavet"
-      class="h-[180px] w-[180px] object-cover object-[40%_88%] rounded-border-radius-25 md:h-[200px] md:w-[200px] "
+      alt="interiør af café"
+      class="h-[300px] w-[180px] object-cover object-center rounded-border-radius-25 md:h-[400px] md:w-[280px]"
     />
   </div>
 
-  <div class="md:ml-10 md:w-2/5 w-4/5">
-    <h1 class="text-left text-44 mb-8 font-EBGaramond font-medium leading-38 space-x-spacing-6xl md:text-52 items-center">
-    Smag du kan tage med hjem
-    </h1>
-    <p class="text-left font-LivvicRegular text-18 font-regular leading-28 md:text-18 mb-10">
-    Hos Esso finder du mere end bare god kaffe. Vi har skabt et sted med kvalitet og atmosfære – hvor alle er velkomne, og hverdagen får lov at trække vejret. Kom forbi og mærk stemningen selv. <br>
-  Her handler det om ægthed. Et sted, hvor mennesker mødes, ideer opstår og stemninger får lov at gro.
-    </p>
-
-     <!-- CTA-knap til menu -->
-      <a href="/menu">
-      <button class:list={[buttonStyling, variantClasses[variant], sizeClasses[size]]}>
-       Se caféens udvalg
-      </button>
-    </a>
-  </div>
 </section>
+
  
  <!-- Afsnit om fysiske salgsprodukter + CTA-knap (makro) til Menu-->
  <!-- <section>
