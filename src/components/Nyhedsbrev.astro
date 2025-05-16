@@ -1,22 +1,43 @@
 ---
 import Button from '../components/Button.astro';
+import { Image } from 'astro:assets';
+import champagne_event from "../assets/images/champagne_event.webp";
+import nyhedsbrev1 from "../assets/images/nyhedsbrev1.webp";
+
 ---
 
-<section class="bg-gray-100 p-6 rounded-lg">
-    <h2 class="text-2xl font-semibold mb-4">Tilmeld dig vores nyhedsbrev</h2>
-    <form action="/nyhedsbrev" method="POST">
-      <label for="name" class="block text-sm">Navn:</label>
-      <input type="text" id="name" name="name" class="w-full p-2 mb-4 border border-gray-300 rounded-md" required />
-      
-      <label for="email" class="block text-sm">E-mail:</label>
-      <input type="email" id="email" name="email" class="w-full p-2 mb-4 border border-gray-300 rounded-md" required />
-      
-      <button type="submit" class="w-full py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-700">Tilmeld dig</button>
+<section class="bg-color-creme p-6 rounded-lg mt-10 px-16 md:grid md:grid-cols-2 md:py-10 md:pb-24 md:px-28">
+  <div class="txt_form md:pl-4">
+    <h2 class="text-44 font-EBGaramond mb-4 pb-spacing-sm-(mobil) pt-12 md:text-52">Friskbrygget nyt</h2>
+    <p class="font-LivvicRegular text-18 pb-spacing-3xl-(mobil) pr-6 md:pr-16 md:text-18">Tilmeld dig vores nyhedsbrev og få første kig på kommende events, eksklusive kaffetilbud og små glimt fra livet i caféen.</p>
+   
+    <form>
+      <label for="email" class="block font-LivvicRegular text-18 pb-4">E-mail:</label>
+      <input type="email" id="email" name="email" placeholder="Anders.andersen@hotmail.com" class="w-[480px] py-3 border border-white rounded-border-radius-50 md:text-18 " required />
+     <div class="pt-spacing-xl-(mobil) flex justify-center pb-10 md:flex md:justify-start md:hidden">
+      <Button  type="submit" variant="secondary", size="small" >Tilmeld dig her</Button>
+     </div>
+       <!-- OBS: desktop variant af knap -->
+     <div class="md:flex md:justify-start md:pt-spacing-m hidden">
+      <Button  type="submit" variant="secondary", size="medium" >Tilmeld dig her</Button>
+     </div>
+   
     </form>
-    <br>
-    <Button variant="primary", size="small">Se vores menu</Button>
-    <br>
-    <Button variant="secondary", size="medium">Læs mere her</Button>
+  </div>
+
+
+
+  <div class="billeder grid grid-cols-2 gap-5 pt-16 pb-20 md:pl-10 md:gap-5">
+    <Image src={nyhedsbrev1} alt="billede af yoghurt, kanelsnegl, glas med iskaffe og matcha" class="rounded-border-radius-25"/>
+    <Image src={champagne_event} alt="billede af champagne der bliver hældt i plastikkop" class="rounded-border-radius-25" />
+  </div>
+
+
+
+
+
+   
+
   
   </section>
   
