@@ -11,7 +11,7 @@ import CookieLemonade from '../assets/images/cookie_lemonade.webp';
 import ESSOfacade from '../assets/images/esso_facade.webp';
 import Mexico from '../assets/images/justcoffee_mexico.webp';
 import SolMaane from '../assets/images/justcoffee_sologmaane.webp';
-
+import Skaenke from '../assets/images/skaenke_champagne.webp';
 
 const {variant= "primary" , size= "medium"} = Astro.props;
 
@@ -146,17 +146,17 @@ const sizeClasses = {
     </section>
 
  <!-- Afsnit om Esso + CTA-knap (mikro) til Om os -->
-<section class="bg-color-creme md:pl-20 py-10 md:min-h-[70vh] min-h-full items-center justify-center flex flex-col md:flex-row md:space-x-spacing-5xl px-0 space-y-spacing-2xl w-full mx-auto mt-spacing-xl-(mobil)">
+<section class="bg-color-creme md:pl-20 py-10 md:min-h-[60vh] min-h-full items-center justify-center flex flex-col md:flex-row md:space-x-spacing-5xl px-0 space-y-spacing-2xl w-full mx-auto mt-spacing-xl-(mobil)">
   <div>
     <Image
       src={ESSOfacade}
       alt="en kaffe bliver lavet"
-      class="h-[300px] w-[360px] object-cover object-[50%_70%] rounded-border-radius-25 md:h-[400px] md:w-[580px] md:space-y-spacing-ml md:mt-spacing-6xl mt-spacing-3xl-(mobil) md:ml-10"
+      class="h-[300px] w-[360px] object-cover object-[50%_70%] rounded-border-radius-25 md:h-[400px] md:w-[580px] md:space-y-spacing-ml md:mt-spacing-6xl mt-spacing-4xl-(mobil) md:ml-10"
     />
   </div>
 
   <div class="md:ml-20 md:w-2/5 w-4/5">
-    <h1 class="text-left text-44 mb-8 font-EBGaramond font-medium leading-38 md:text-52 md:w-4/5  md:mt-spacing-4xl">
+    <h1 class="text-left text-44 mb-8 font-EBGaramond font-medium leading-38 md:text-52 md:w-4/5 md:mt-spacing-5xl">
     Din lokale café i Valby
   </h1>
     <p class="text-left font-LivvicRegular text-18 font-regular leading-28 md:text-18 mb-10 md:w-4/5">
@@ -173,52 +173,62 @@ const sizeClasses = {
   </div>
 </section>
 
- <section class="bg-color-creme md:min-h-[70vh] min-h-full flex flex-col-reverse md:flex-row items-center justify-center md:space-x-spacing-5xl px-0 space-y-spacing-2xl w-full mx-auto ">
+ <section class="bg-color-creme md:min-h-[60vh] min-h-full flex flex-col-reverse md:flex-row items-center justify-center md:space-x-spacing-5xl px-0 space-y-spacing-2xl w-full mx-auto ">
   <!-- Tekst -->
-  <div class="md:ml-20 md:w-2/6 w-4/5">
-    <h1 class="text-left text-44 mb-8 font-EBGaramond font-medium leading-38 md:text-52 md:mt-spacing-6xl-(mobil)">
-     Smag du kan tage med hjem
-    </h1>
-    <p class="text-left font-LivvicRegular text-18 font-regular leading-28 md:text-18 mb-10">
-     Ud over frisklavet kaffe og hjemmelavet bagværk byder vi også på naturlige vine, nøje udvalgte produkter og små delikatesser. Alt er udvalgt med omtanke både til dig selv, til middagsbordet eller som en særlig gave. <br> Tag lidt af Esso med hjem og forlæng følelsen – også uden for caféens fysiske rum.
-    </p>
+<div class="md:ml-20 md:w-2/6 w-4/5 order-2 md:order-1">
+  <h1 class="text-left text-44 mb-8 font-EBGaramond font-medium leading-38 md:text-52 mt-spacing-5xl-(mobil)">
+    Smag du kan tage med hjem
+  </h1>
+  <p class="text-left font-LivvicRegular text-18 font-regular leading-28 md:text-18 mb-10">
+    Ud over frisklavet kaffe og hjemmelavet bagværk byder vi også på naturlige vine, nøje udvalgte produkter og små delikatesser. Alt er udvalgt med omtanke både til dig selv, til middagsbordet eller som en særlig gave. <br> Tag lidt af Esso med hjem og forlæng følelsen – også uden for caféens fysiske rum.
+  </p>
 
-    <!-- CTA-knap -->
-   <a href="/menu" >
-        <button class:list={[buttonStyling, variantClasses[variant], sizeClasses[size]]}>
-          Se caféens udvalg
-        </button>
-      </a>
-  </div>
+  <!-- CTA-knap -->
+  <a href="/menu">
+    <button class:list={[buttonStyling, variantClasses[variant], sizeClasses[size]]}>
+      Se caféens udvalg
+    </button>
+  </a>
+</div>
 
-  <!-- Billeder -->
-  <div class="flex space-x-6 md:w-[580px] w-full justify-center md:space-x-spacing-sm ">
-    <Image
-      src={Mexico}
-      alt="en kaffe bliver lavet"
-      class="h-[15%] w-[30%] object-cover object-[60%_115%] rounded-border-radius-25 md:h-[250px] md:w-[180px] md:mt-[200px]"
-    />
-    <Image
-      src={SolMaane}
-      alt="interiør af café"
-      class="h-[30%] w-[45%] mt-[-50px] object-cover object-[60%_115%] rounded-border-radius-25 md:h-[350px] md:w-[250px] md:mt-[150px] md:mb-spacing-7xl"
-    />
-  </div>
+<!-- Billeder -->
+<div class="flex space-x-6 md:w-[580px] w-full justify-center md:space-x-spacing-sm order-1 md:order-2">
+  <Image
+    src={Mexico}
+    alt="en kaffe bliver lavet"
+    class="h-[15%] w-[30%] object-cover object-[60%_115%] rounded-border-radius-25 md:h-[250px] md:w-[180px] md:mt-[200px]"
+  />
+  <Image
+    src={SolMaane}
+    alt="interiør af café"
+    class="h-[30%] w-[45%] mt-[-50px] object-cover object-[60%_115%] rounded-border-radius-25 md:h-[350px] md:w-[250px] md:mt-[150px] md:mb-spacing-7xl mb-spacing-6xl-(mobil)"
+  />
+</div>
+
 
 </section>
-
- 
- <!-- Afsnit om fysiske salgsprodukter + CTA-knap (makro) til Menu-->
- <!-- <section>
-  <h2>Makrokonvertering: Kort om produkter og CTA til Menu, fx "Se menu"</h2>
-</section>
-  -->
  <!-- Instagram Feed -->
- <!-- <section>
-  <h2>Sektion med Instagram-feed (galleri)</h2>
-</section> -->
+ <section class="flex flex-col items-center md:items-start py-20 md:px-32 md:mb-spacing-xs">
+    <h1 class="text-left text-44 md:text-52 font-EBGaramond font-medium md:mb-spacing-xs">Følg med på vores instagram</h1>
+    <h2 class="text-left md:text-44 font-EBGaramond text-36 md:mb-spacing-xs hover:underline">
+      <a href="https://www.instagram.com/esso_cph/" target="_blank" rel="noopener noreferrer">@esso_cph</a>
+    </h2>
+    <p class="text-left font-LivvicRegular text-18 md:text-18 md:mt-spacing-xs">På Instagram deler vi små glimt fra vores hverdag i caféen – fra friskbrygget kaffe <br> og hjemmelavet mad til nye varer på hylderne og de hyggelige øjeblikke. 
+</p>
 
- <!-- Nyhedsbrev: Kontaktformular med CTA-knap -->
+  <div class="grid md:grid-cols-4 md:grid-rows-2 gap-5 mt-10 grid-cols-2 grid-rows-4 justify-center">
+    <a href="https://www.instagram.com/esso_cph/" target="_blank" > <Image src={Skaenke} alt='første billede på instagram' class="insta1 h-[200px] md:h-[250px] w-[200px] md:w-[250px] object-cover rounded-3xl transition-transform duration-300 transform hover:scale-105"/></a>
+    <a href="https://www.instagram.com/esso_cph/" target="_blank" > <Image src={Skaenke} alt='første billede på instagram' class="insta1 h-[200px] md:h-[250px] w-[200px] md:w-[250px] object-cover rounded-3xl transition-transform duration-300 transform hover:scale-105"/></a>
+    <a href="https://www.instagram.com/esso_cph/" target="_blank" > <Image src={Skaenke} alt='første billede på instagram' class="insta1 h-[200px] md:h-[250px] w-[200px] md:w-[250px] object-cover rounded-3xl transition-transform duration-300 transform hover:scale-105"/></a>
+    <a href="https://www.instagram.com/esso_cph/" target="_blank" > <Image src={Skaenke} alt='første billede på instagram' class="insta1 h-[200px] md:h-[250px] w-[200px] md:w-[250px] object-cover rounded-3xl transition-transform duration-300 transform hover:scale-105"/></a>
+    <a href="https://www.instagram.com/esso_cph/" target="_blank" > <Image src={Skaenke} alt='første billede på instagram' class="insta1 h-[200px] md:h-[250px] w-[200px] md:w-[250px] object-cover rounded-3xl transition-transform duration-300 transform hover:scale-105"/></a>
+    <a href="https://www.instagram.com/esso_cph/" target="_blank" > <Image src={Skaenke} alt='første billede på instagram' class="insta1 h-[200px] md:h-[250px] w-[200px] md:w-[250px] object-cover rounded-3xl transition-transform duration-300 transform hover:scale-105"/></a>
+    <a href="https://www.instagram.com/esso_cph/" target="_blank" > <Image src={Skaenke} alt='første billede på instagram' class="insta1 h-[200px] md:h-[250px] w-[200px] md:w-[250px] object-cover rounded-3xl transition-transform duration-300 transform hover:scale-105"/></a>
+    <a href="https://www.instagram.com/esso_cph/" target="_blank" > <Image src={Skaenke} alt='første billede på instagram' class="insta1 h-[200px] md:h-[250px] w-[200px] md:w-[250px] object-cover rounded-3xl transition-transform duration-300 transform hover:scale-105"/></a>
+
+  </div>
+  </section>
+
   <Formular />
 
 </MainLayout>
