@@ -60,7 +60,7 @@ const sizeClasses = {
 
   <div class="md:ml-10 md:w-2/5 w-4/5">
     <h1 class="text-left text-44 mb-8 font-EBGaramond font-medium leading-38 space-x-spacing-6xl md:text-52 items-center">
-      Velkommen til Esso - en <br> café med mere på hjerte
+      Velkommen til Esso <br> - en café med mere på hjerte
     </h1>
     <p class="text-left font-LivvicRegular text-18 font-regular leading-28 md:text-18">
       Hos Esso handler det ikke om at skynde sig. Vi inviterer dig ind i et rum, hvor stemningen er rolig, kaffen er god, og detaljerne tæller.
@@ -71,82 +71,79 @@ const sizeClasses = {
   </div>
 </section>
 
- <!-- CTA -->
-<section class="flex flex-col md:flex-row py-20 px-4 md:space-x-spacing-7xl space-y-spacing-2xl items-center w-full max-w-[1350px] mx-auto">
+  <!-- CTA -->
+  <section class="min-h-screen items-center justify-center flex flex-col md:flex-row py-20 px-4 md:space-x-spacing-7xl space-y-spacing-2xl w-full max-w-[1350px] mx-auto">
 
+    <!-- Overskrift -->
+    <div class="md:w-6/7 w-4/5 mt-10 ">
+      <h1 class="text-left text-44 mb-8 font-EBGaramond font-medium leading-38 md:text-52 md:space-y-spacing-5xl">
+        Mere end bare kaffe <br> – en oplevelse for dine sanser
+      </h1>
 
-  <!-- Overskrift -->
-  <div class="md:w-6/7 w-4/5 mt-10 ">
-    <h1 class="text-left text-44 mb-8 font-EBGaramond font-medium leading-38 md:text-52 md:space-y-spacing-5xl">
-      Mere end bare kaffe – en <br> oplevelse for dine sanser
-    </h1>
+  <!-- Skrå række med 3 billeder -->
+  <div class="hidden md:flex justify-center w-full space-x-spacing-2xl mt-[200px]">
 
+      <!-- Billede 1 -->
+      <div class="w-[800px] h-[800px] mt-0">
+        <Image
+          src={ImgRaekke}
+          alt="Række kaffe"
+          class="w-full h-[55%] object-cover rounded-border-radius-25"
+        />
+      </div>
 
-<!-- Skrå række med 3 billeder -->
-<div class="hidden md:flex justify-center w-full space-x-spacing-2xl mt-[200px]">
+      <!-- Billede 2 -->
+      <div class="w-[800px] h-[800px] -mt-24">
+        <Image
+          src={Boller}
+          alt="Boller"
+          class="w-full h-[55%] object-cover rounded-border-radius-25"
+        />
+      </div>
 
-    <!-- Billede 1 -->
-    <div class="w-[600px] h-[850px] mt-0">
-      <Image
-        src={ImgRaekke}
-        alt="Række kaffe"
-        class="w-full h-[55%] object-cover rounded-border-radius-25"
-      />
+      <!-- Billede 3 -->
+      <div class="w-[800px] h-[800px] -mt-48">
+        <Image
+          src={CookieLemonade}
+          alt="Cookie og lemonade"
+          class="w-full h-[55%] object-cover rounded-border-radius-25"
+        />
+      </div>
     </div>
 
-    <!-- Billede 2 -->
-    <div class="w-[600px] h-[850px] -mt-24">
-      <Image
-        src={Boller}
-        alt="Boller"
-        class="w-full h-[55%] object-cover rounded-border-radius-25"
-      />
-    </div>
-
-    <!-- Billede 3 -->
-    <div class="w-[600px] h-[850px] -mt-48">
-      <Image
-        src={CookieLemonade}
-        alt="Cookie og lemonade"
-        class="w-full h-[55%] object-cover rounded-border-radius-25"
-      />
-    </div>
-  </div>
-
-  <!-- Mobil-visning: horisontal scroll -->
-<div class="md:hidden flex overflow-x-auto space-x-[30px] px-4 scrollbar-hide">
- <div class="flex-shrink-0">
-  <Image src={ImgRaekke} alt="Række kaffe" class="w-[275px] h-[297px] object-cover rounded-[25px]" />
-</div>
+    <!-- Mobil-visning: horisontal scroll -->
+  <div class="md:hidden flex overflow-x-auto space-x-[30px] px-4 scrollbar-hide">
   <div class="flex-shrink-0">
-    <Image src={Boller} alt="Boller" class="w-[275px] h-[297px] object-cover rounded-[25px]" />
+    <Image src={ImgRaekke} alt="Række kaffe" class="w-[275px] h-[297px] object-cover rounded-[25px]" />
   </div>
-  <div class="flex-shrink-0">
-    <Image src={CookieLemonade} alt="Cookie og lemonade" class="w-[275px] h-[297px] object-cover rounded-[25px]" />
-  </div>
-</div>
-
-  <!-- Tekst til CTA -->
-  <div class="md:w-2/4 w-4/5 md:mt-[-400px] md:ml-auto mt-spacing-xl-(mobil)">
-    <h1 class="text-left text-44 mb-8 font-EBGaramond font-medium leading-38 md:text-52">
-      Find ro i vores menu
-    </h1>
-
-    <p class="text-left font-LivvicRegular text-18 font-regular leading-28 md:mr-10 mb-10">
-      Vores hjemmelavede menu byder på håndplukkede favoritter – skabt til at nyde i dit eget tempo. Her finder du både det klassiske og det nytænkte, det søde og det salte. <br>
-      Alt er lavet med kærlighed og med respekt for råvarer. <br>
-      Uanset om du længes efter noget let eller bare din faste kaffe, så har vi noget til dig.
-    </p>
-
-    <!-- CTA-knap -->
-      <a href="/menu" >
-      <button class:list={[buttonStyling, variantClasses[variant], sizeClasses[size]]}>
-        Se vores menu
-      </button>
-    </a>
+    <div class="flex-shrink-0">
+      <Image src={Boller} alt="Boller" class="w-[275px] h-[297px] object-cover rounded-[25px]" />
+    </div>
+    <div class="flex-shrink-0">
+      <Image src={CookieLemonade} alt="Cookie og lemonade" class="w-[275px] h-[297px] object-cover rounded-[25px]" />
+    </div>
   </div>
 
-  </section>
+    <!-- Tekst til CTA -->
+    <div class="md:w-2/4 w-4/5 md:mt-[-390px] md:ml-auto mt-spacing-xl-(mobil)">
+      <h1 class="text-left text-44 mb-8 font-EBGaramond font-medium leading-38 md:text-52">
+        Find ro i vores menu
+      </h1>
+
+      <p class="text-left font-LivvicRegular text-18 font-regular leading-28 md:mr-10 mb-10">
+        Vores hjemmelavede menu byder på håndplukkede favoritter – skabt til at nyde i dit eget tempo. Her finder du både det klassiske og det nytænkte, det søde og det salte. <br>
+        Alt er lavet med kærlighed og med respekt for råvarer. <br>
+        Uanset om du længes efter noget let eller bare din faste kaffe, så har vi noget til dig.
+      </p>
+
+      <!-- CTA-knap -->
+        <a href="/menu" >
+        <button class:list={[buttonStyling, variantClasses[variant], sizeClasses[size]]}>
+          Se vores menu
+        </button>
+      </a>
+    </div>
+    </section>
 
  <!-- Afsnit om Esso + CTA-knap (mikro) til Om os -->
 <section class="bg-color-creme w-full flex flex-col md:flex-row py-10 px-0 md:pl-10 md:space-y-spacing-xs md:space-x-spacing-6xl space-y-spacing-2xl items-center">
