@@ -2,19 +2,38 @@
 // Importer nødvendige komponenter
 import MainLayout from "../layouts/MainLayout.astro";
 import Formular from "../components/Nyhedsbrev.astro";
+import { Image } from 'astro:assets';
 import Kontakt1 from '../assets/images/kontakt1.webp';
+
+const {variant= "primary" , size= "medium"} = Astro.props;
+
+const buttonStyling = "text-white rounded-border-radius-25 py-[15px] transition transform hover:opacity-[.66] font-semibold"
+
+
+const variantClasses = 
+{
+    primary : "bg-color-mørkebrun px-[80px]",
+    secondary: "bg-color-lysebrun px-[80px]",
+};
+
+// small for mobil og medium for desktop
+const sizeClasses = {
+    small: "text-16",
+    medium: "text-18",
+};
+
 ---
 
 <MainLayout title="Kontakt">
 <!-- Formular.astro -->
-<section class="px-spacing-m py-spacing-xl">
-  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-start">
+<section class="px-spacing-m pt-spacing-6xl pb-spacing-4xl">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-spacing-m md:gap-spacing-5xl items-start">
     <!-- Venstre kolonne med tekst og formular -->
     <div>
-      <h1 class="font-EBGaramond text-28 font-medium text-color-mørkebrun mb-spacing-s">
+      <h1 class="font-EBGaramond md:text-52 text-44 font-medium text-color-mørkebrun mb-spacing-s">
         Vi vil gerne høre fra dig
       </h1>
-      <p class="font-LivvicRegular text-18 text-color-mørkebrun mb-spacing-ml">
+      <p class="font-LivvicRegular text-18 text-color-mørkebrun mb-spacing-ml leading-28">
         Uanset om du har spørgsmål, ris eller ros, så er du altid velkommen til at kontakte os. <br>
         Udfyld blot kontaktformularen – så vender vi tilbage til dig så hurtigt vi kan.
       </p>
@@ -22,35 +41,89 @@ import Kontakt1 from '../assets/images/kontakt1.webp';
       <form class="space-y-6">
         <div>
           <label for="navn" class="block text-color-mørkebrun mb-1">Navn</label>
-          <input type="text" id="navn" name="navn" class="w-full border-b border-color-mørkebrun bg-transparent focus:outline-none py-2" />
+          <input
+            type="text"
+            id="navn"
+            name="navn"
+            class="w-full border-0 border-b border-color-mørkebrun bg-transparent focus:outline-none focus:ring-0 focus:border-color-lysebrun py-2"
+          />
         </div>
 
         <div>
           <label for="email" class="block text-color-mørkebrun mb-1">Email</label>
-          <input type="email" id="email" name="email" class="w-full border-b border-color-mørkebrun bg-transparent focus:outline-none py-2" />
+          <input
+          type="email"
+          id="email"
+          name="email"
+          class="w-full border-0 border-b border-color-mørkebrun bg-transparent focus:outline-none focus:ring-0 focus:border-color-lysebrun py-2"
+        />
         </div>
 
         <div>
-          <label for="besked" class="block text-color-mørkebrun mb-1">Skriv din besked her...</label>
-          <textarea id="besked" name="besked" rows="6" placeholder="Skriv din besked her..." class="w-full border border-color-mørkebrun rounded-lg bg-transparent p-3 focus:outline-none"></textarea>
+          <label for="besked" class="block text-color-mørkebrun mb-1"></label>
+          <textarea id="besked" name="besked" rows="6" placeholder="Skriv din besked her..." class="w-full border border-color-mørkebrun rounded-lg bg-transparent mt-spacing-s-(mobil) p-3 focus:outline-none"></textarea>
         </div>
 
-        <button type="submit" class="bg-color-lysebrun text-white py-2 px-6 rounded-full hover:bg-color-mørkebrun transition">
-          Send
-        </button>
+       <!-- Send-knap -->
+     <a href="/">
+      <button class="text-white rounded-border-radius-25 py-[15px] transition transform hover:opacity-[.66] font-semibold bg-color-lysebrun px-[80px] text-18 md:mt-spacing-m mt-spacing-m-(mobil)">
+        Send
+      </button>
+    </a>
       </form>
     </div>
 
-    <!-- Højre kolonne med billede -->
+      <!-- Højre kolonne med billede -->
     <div>
-      <Image
-      src={Kontakt1}
-      alt="en kaffe bliver lavet"
-      class="h-[300px] w-[360px] object-cover object-[50%_70%] rounded-border-radius-25 md:h-[400px] md:w-[580px] md:space-y-spacing-ml md:mt-spacing-5xl mt-spacing-4xl-(mobil) md:ml-10"
-    />
+        <Image
+          src={Kontakt1}
+          alt="en kaffe bliver lavet"
+          class="h-[380px] w-[380px] object-cover object-[40%_88%] rounded-border-radius-25 md:h-[560px] md:w-[480px] md:mt-[70px]"
+        />
+      </div>
     </div>
+</section>
+
+<section class="text-color-mørkebrun px-6 py-12">
+  <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-sm md:text-base">
+    <!-- Følg os -->
+    <div>
+      <h1 class="font-EBGaramond font-medium md:text-52 text-44 md:mb-spacing-lg mb-spacing-xl-(mobil)">Følg os</h1>
+      <h3 class="font-EBGaramond font-medium md:text-36 text-28 mb-2 ">Instagram</h3>
+      <h4 class="space-y-1 font-EBGaramond md:text-28 text-20">
+        <a href="https://www.instagram.com/esso_cph/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><a href="mailto:essocph@gmail.com" class="hover:underline ">
+        @esso_cph
+      </a></a>
+          <h3 class="font-EBGaramond font-medium md:text-36 text-28 mb-2">Facebook</h3>
+          <a href="https://www.facebook.com/Realiserbar" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><h4 class="font-EBGaramond md:text-28 text-20">/essocph</h4></a>
+      </h4>
+    </div>
+
+    <!-- Kontakt -->
+      <div>
+      <h1 class="font-EBGaramond font-medium md:text-52 text-44 md:mb-spacing-lg mb-spacing-xl-(mobil) ">Kontakt</h1>
+      <h3 class="font-EBGaramond font-medium md:text-36 text-28 mb-2 ">E-mail</h3>
+      <h4 class="space-y-1 font-EBGaramond md:text-28 text-20">
+      <a href="mailto:essocph@gmail.com" class="hover:underline ">
+        essocph@gmail.com
+      </a>
+          <h3 class="font-EBGaramond font-medium md:text-36 text-28 mb-2">Telefon</h3>
+          <h4 class="font-EBGaramond md:text-28 text-20">+45 60 67 08 81</h4>
+      </h4>
+    </div>
+
+    <!-- Åbningstider -->
+    <div>
+      <h1 class="font-EBGaramond font-medium md:text-52 text-44 md:mb-spacing-lg mb-spacing-xl-(mobil) ">Åbningstider</h1>
+      <ul class="space-y-1">
+        <li>Tirs - Søn: Kl. 09-17</li>
+        <li>Lukket hver mandag</li>
+      </ul>
+    </div>
+
   </div>
 </section>
+
 
   <Formular />
 
