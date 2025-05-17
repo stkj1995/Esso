@@ -4,6 +4,8 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Nyhedsbrev from "../components/Nyhedsbrev.astro";
 import Omoshero from '../assets/images/omoshero.webp';
 import { Image } from 'astro:assets';
+import Button from '../components/Button.astro';
+import essofacadeny from '../assets/images/esso_facade.webp';
 ---
 
 <MainLayout title="Om os">
@@ -16,6 +18,34 @@ import { Image } from 'astro:assets';
         </div>
         </div>
       </section>
+
+        <!-- note: indsætte mx-16 (mobil) på mainlayout så alle sider har samme margin  -->
+   <!-- En drøm i valby afsnit -->
+  <section class="pb-spacing-6xl-(mobil)">
+    <div class="grid">
+      <div class="mx-16">
+        <h1 class="text-44 font-EBGaramond text-color-mørkebrun pb-spacing-ml-(mobil) ">En drøm midt i Valby</h1>
+        <p class="text-18 font-LivvicRegular leading-28 text-color-mørkebrun pb-spacing-2xl-(mobil)">Josephine står bag Esso – stifter, idékvinde og ildsjæl. <br> Sammen med sin kæreste i køkkenet og et lille hold gode folk åbner hun dørene i maj 2025. Alt er skabt fra bunden med én ambition: at invitere Valby og resten af København indenfor i et enkelt, men gennemarbejdet univers.
+          Her er stemning, nærvær og fællesskab altid i centrum - et sted, hvor mennesker mødes i øjenhøjde.</p>
+      </div>
+  
+      <a href="https://kobenhavnliv.dk/butiksnytgl/29-aarige-josephine-har-sparet-op-i-5-aar-nu-aabner-hun-sin-cafe-skal-matche-brokvarterernes-top">
+        <div class="flex justify-center">
+          <Button  type="submit" variant="secondary", size="small" >Læs mere her</Button>
+        </div>
+        <!-- OBS: knap variant til desktop -->
+        <div class="md:flex md:justify-start md:pt-spacing-m hidden">
+          <Button  type="submit" variant="secondary", size="medium" >Læs mere her</Button>
+         </div>
+      </a>
+    
+    </div>
+
+    <div class="flex justify-center pt-spacing-3xl-(mobil)">
+      <Image src={essofacadeny} alt="billede af kvinder der sidder foran en bygning" class="rounded-border-radius-25 w-[450px] h-[450px] object-cover"/>
+
+    </div>
+  </section>
     
  
 <Nyhedsbrev></Nyhedsbrev>
