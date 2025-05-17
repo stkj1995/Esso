@@ -2,42 +2,56 @@
 // Importer nødvendige komponenter
 import MainLayout from "../layouts/MainLayout.astro";
 import Formular from "../components/Nyhedsbrev.astro";
+import Kontakt1 from '../assets/images/kontakt1.webp';
 ---
 
 <MainLayout title="Kontakt">
-  <!-- Hero billede + logo -->
+<!-- Formular.astro -->
+<section class="px-spacing-m py-spacing-xl">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-start">
+    <!-- Venstre kolonne med tekst og formular -->
+    <div>
+      <h1 class="font-EBGaramond text-28 font-medium text-color-mørkebrun mb-spacing-s">
+        Vi vil gerne høre fra dig
+      </h1>
+      <p class="font-LivvicRegular text-18 text-color-mørkebrun mb-spacing-ml">
+        Uanset om du har spørgsmål, ris eller ros, så er du altid velkommen til at kontakte os. <br>
+        Udfyld blot kontaktformularen – så vender vi tilbage til dig så hurtigt vi kan.
+      </p>
 
- <!-- Brødkrummesti-->
+      <form class="space-y-6">
+        <div>
+          <label for="navn" class="block text-color-mørkebrun mb-1">Navn</label>
+          <input type="text" id="navn" name="navn" class="w-full border-b border-color-mørkebrun bg-transparent focus:outline-none py-2" />
+        </div>
 
- <!-- Ris og ros-->
-  <section>
-    <h2>Ris og ris</h2>
-    <p>Kort tekst vedr. kontakt/ris eller ros/forespørgsel osv) m. illustration/billede og formular</p>
-  </section>
- 
-    <!-- Kontaktinfo -->
-    <section>
-      <h3>Kontaktinfo</h3>
-      <p>E-mail: essocph@gmail.com</p>
-      <p>Telefon: +45 60 67 08 81</p>
-      <p>Adresse: Vigerslev Allé 36, st., dør 1</p>
-    </section>
+        <div>
+          <label for="email" class="block text-color-mørkebrun mb-1">Email</label>
+          <input type="email" id="email" name="email" class="w-full border-b border-color-mørkebrun bg-transparent focus:outline-none py-2" />
+        </div>
 
-  <!-- Åbningstider -->
-  <section>
-    <h2>Åbningstider</h2>
-    <p>Kl. 9-17 alle dage pånær mandag</p>
-  </section>
+        <div>
+          <label for="besked" class="block text-color-mørkebrun mb-1">Skriv din besked her...</label>
+          <textarea id="besked" name="besked" rows="6" placeholder="Skriv din besked her..." class="w-full border border-color-mørkebrun rounded-lg bg-transparent p-3 focus:outline-none"></textarea>
+        </div>
 
-  <!-- CTA sektion -->
+        <button type="submit" class="bg-color-lysebrun text-white py-2 px-6 rounded-full hover:bg-color-mørkebrun transition">
+          Send
+        </button>
+      </form>
+    </div>
 
-   <!-- Sociale medier med CTA-ikoner -->
-   <section>
-    <h2>Følg med her</h2>
-    <p>(Ikoner til Instagram + Facebook) - Følg os på SoMe: Instagram + Fb </p>
-  </section>
+    <!-- Højre kolonne med billede -->
+    <div>
+      <Image
+      src={Kontakt1}
+      alt="en kaffe bliver lavet"
+      class="h-[300px] w-[360px] object-cover object-[50%_70%] rounded-border-radius-25 md:h-[400px] md:w-[580px] md:space-y-spacing-ml md:mt-spacing-5xl mt-spacing-4xl-(mobil) md:ml-10"
+    />
+    </div>
+  </div>
+</section>
 
-<!-- Kontaktformular -->
   <Formular />
 
 </MainLayout>
