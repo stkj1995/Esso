@@ -1,44 +1,22 @@
 ---
-// Importer nødvendige komponenter
 import MainLayout from "../layouts/MainLayout.astro";
-import Formular from "../components/Nyhedsbrev.astro";
+import Nyhedsbrev from "../components/Nyhedsbrev.astro";
 import { Image } from 'astro:assets';
-import menuImage from "../assets/images/menu.png";
+import menuhero from "../assets/images/hero_menu.webp";
 ---
 
 <MainLayout title="Menu">
-  <!-- Hero billede + logo -->
-
-
-  <!-- Brødkrummesti-->
-
-
-  <!-- Menu oversigt -->
-  <section>
-    <h2>Menu</h2>
-    <ul>
-      <li>Varme drikke</li>
-      <li>Kager/Wienerbrød</li>
-      <li>Mad</li>
-      <li>Vin og Øl</li>
-      <li>Kolde drikke</li>
-    </ul>
+  <!-- OBS: NYT HERO IMAGE!!!  -->
+  <section class="pb-48">
+    <div class="relative">
+      <Image 
+                src={menuhero} alt='billede af cheesecake' class="h-[515px] w-[528px] scale-150 md:max-h-[600px] md:w-screen object-cover"/>
+    <div class="absolute inset-0 text-center pt-24 md:ml-16 md:mt-20 m-20 mt-52 md:m-0">
+    <h1 class="text-44 md:text-52 font-EBGaramond md:mb-[-40px] mb-10 text-color-mørkebrun">Menu</h1>
+    </div>
+    </div>
   </section>
+ 
 
-    <!-- Oversigt over salgsprodukter i caféen -->
-  <section>
-    <h2>Salgsprodukter i caféen</h2>
-    <ul>
-       <li>Just Coffee</li>
-      <li>Øl</li>
-       <li>Marmelade</li>
-     </ul>
-  </section>
-  
- <!-- CTA -->
-
-
- <!-- Kontaktformular -->
-    <Formular />
-
+<Nyhedsbrev></Nyhedsbrev>
 </MainLayout>
