@@ -59,7 +59,7 @@ import events from '../assets/images/events.webp';
 
        <!-- Det der driver os afsnit ikke med rigtigt billede -->
      <section class="pb-spacing-6xl-(mobil) md:pt-spacing-7xl md:pb-spacing-7xl md:pl-10 md:mx-18">
-      <div class="grid md:grid md:grid-cols-2">
+      <div class="grid md:grid md:grid-cols-2 md:gap-2">
         <div class="mx-10 md:order-1 md:pt-16">
           <h1 class="text-44 font-EBGaramond text-color-mørkebrun pb-spacing-ml-(mobil) md:text-52 md:pb-spacing-m">Det der driver os</h1>
           <p class="text-18 font-LivvicRegular leading-28 text-color-mørkebrun pb-spacing-2xl-(mobil) md:pr-20">For os er Esso et hyggeligt sted, hvor det er meningen, at vi kan dele idéer, drømme og inspirere hinanden. <br> Det handler ikke kun om kaffen, men om møderne mellem mennesker uden hast. <br> Vi tror på, at de bedste samtaler opstår, når skuldrene er sænket og maverne lidt fulde. <br> Hos os er der plads til både snakke og stilhed, hvor ægthed, æstetik og nysgerrighed opstår og mødes – og det er dét, der driver os.</p>
@@ -77,6 +77,7 @@ import events from '../assets/images/events.webp';
           <!-- Citat afsnit -->
      <section class="bg-color-creme pb-24 md:pb-32 md:py-20">
         <div class="md:grid md:grid-cols-2 md:pl-16 md:gap-2">
+            <!-- illustrationer -->
             <div class="grid grid-cols-2 pt-28 px-36 md:gap-3">
                 <div class="">
                     <Image src={vin} alt="illustration af vinglas og vinflaske" class="w-28 md:w-36"/>
@@ -85,14 +86,20 @@ import events from '../assets/images/events.webp';
                     <Image src={oliven} alt="illustration af vinglas og vinflaske" class=" w-[160px] md:w-48"/>
                 </div>
              </div>
-                
+            <!-- citat -->
              <div class="citat px-10 pt-spacing-3xl-(mobil) md:pt-spacing-3xl">
                 <div class="pl-40 pb-14 md:pl-0 md:relative md:-left-20 md:pb-3">
                     <Image src={citattegn1} alt="billede af citationstegn" class="ml-20"/>
                 </div>
-                  <h3 class="text-28 font-EBGaramond px-14 md:pr-44 md:text-28 md:pt-10 md:px-0">Jeg har altid villet skabe mit eget – et sted, hvor man kan mærke æstetikken, møde ligesindede og få en oplevelse med alle sanser.</h3>
-                  <h3 class="font-EBGaramond text-28 pt-14 px-20 text-center md:px-0 ">– Josephine, stifter af Esso</h3>
-                <div class="pl-40 pt-14 md:pl-80 md:pt-6">
+
+                <div class="px-14 md:pr-40 md:text-28 md:pt-10 md:px-0">
+                    <h3 class="text-28 font-EBGaramond">Jeg har altid villet skabe mit eget – et sted, hvor man kan mærke æstetikken, møde ligesindede og få en oplevelse med alle sanser.</h3>
+                </div>
+                <div class="pt-14 px-16 md:pt-10 md:px-0 md:pr-40">
+                    <h3 class="font-EBGaramond text-28">– Josephine, stifter af Esso</h3>
+                </div>
+                
+                  <div class="pl-40 pt-14 md:pl-80 md:pt-6">
                     <Image src={citattegn2} alt="billede af citationstegn" class="ml-20"/>
                 </div>
              </div>
