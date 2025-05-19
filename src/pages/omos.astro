@@ -2,7 +2,7 @@
 // Importer nødvendige komponenter
 import MainLayout from "../layouts/MainLayout.astro";
 import Nyhedsbrev from "../components/Nyhedsbrev.astro";
-import Omoshero from '../assets/images/omoshero.webp';
+import Omoshero from '../assets/images/omoshero_ny.webp';
 import { Image } from 'astro:assets';
 import Button from '../components/Button.astro';
 import essofacadeny from '../assets/images/essofacade_ny.webp';
@@ -20,7 +20,7 @@ import events from '../assets/images/events.webp';
     <section class="pb-48">
         <div class="relative">
           <Image 
-                    src={Omoshero} alt='billede af skammel med vin og glas' class="h-[515px] w-[500px] scale-150 md:max-h-[600px] md:w-[1152px] object-cover md:object-cover"/>
+                    src={Omoshero} alt='billede af skammel med vin og glas' class="h-[515px] w-[500px] scale-150 md:max-h-[600px] md:w-[1152px] object-cover md:object-cover items-center md:items-center"/>
         <div class="absolute inset-0 text-center pt-24 md:mt-20 m-20 mt-52 md:m-0 md:pt-56 ">
         <h1 class="text-44 md:text-52 font-EBGaramond md:mb-[-40px] mb-10 text-color-mørkebrun">Om os</h1>
         </div>
@@ -87,12 +87,12 @@ import events from '../assets/images/events.webp';
              </div>
                 
              <div class="citat pt-spacing-3xl-(mobil) md:pt-spacing-3xl">
-                  <div class="pl-56 pb-14">
-                    <Image src={citattegn1} alt="billede af citationstegn" class="ml-20 "/>
+                  <div class="pl-56 pb-14 md:pl-0 md:relative md:-left-20 md:pb-2">
+                    <Image src={citattegn1} alt="billede af citationstegn" class="ml-20"/>
                   </div>
                   <h3 class="text-28 font-EBGaramond px-20 pl-36 md:pl-0 md:pr-44 md:text-28 md:pt-10">Jeg har altid villet skabe mit eget – et sted, hvor man kan mærke æstetikken, møde ligesindede og få en oplevelse med alle sanser.</h3>
                   <h3 class="font-EBGaramond text-28 pt-14 pl-36 md:pl-0">– Josephine, stifter af Esso</h3>
-                  <div class="pl-56 pt-14">
+                  <div class="pl-56 pt-14 md:pl-80 md:pt-2">
                     <Image src={citattegn2} alt="billede af citationstegn" class="ml-20"/>
                   </div>
              </div>
