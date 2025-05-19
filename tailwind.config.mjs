@@ -21,9 +21,11 @@ export default {
     },
 
     lineHeight: {
-      28: ["28px"],
-      38: ["38px"],
-    },
+    28: ['28px'],
+    38: ['38px'],
+    48: ['48px'], // tilføjet 19/5
+    56: ['56px'], // tilføjet 19/5
+  },
 
     fontWeight: {
       regular: "400",
