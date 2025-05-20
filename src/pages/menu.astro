@@ -5,6 +5,10 @@ import { Image } from 'astro:assets';
 import menuhero from "../assets/images/hero_menu.webp";
 import matcha from "../assets/images/matchaillu.webp";
 import tomat from "../assets/images/tomatillu.webp";
+import kage from "../assets/images/kageillu.webp";
+import oliven from "../assets/images/oliven.webp";
+import lemonade from "../assets/images/lemonadeillu.webp";
+import vin from "../assets/images/vinillu.webp";
 ---
 
 <MainLayout title="Menu">
@@ -35,9 +39,9 @@ import tomat from "../assets/images/tomatillu.webp";
 
   <!-- varme drikke -->
   <section class="varmedrikke px-10 md:px-32">
-    <h2 class="text-36 font-EBGaramond pl-3 md:text-44 md:pl-20">Varme drikke</h2>
+    <h2 class="text-36 font-EBGaramond pl-3 md:text-44 md:pl-28">Varme drikke</h2>
 
-    <div class="grid grid-cols-2 gap-x-8 gap-y-12 px-4 pt-16 md:pl-24 md:gap-y-14">
+    <div class="grid grid-cols-2 gap-x-8 gap-y-12 px-4 pt-16 md:pl-32 md:gap-y-14">
       <div>
         <h3 class="text-28 font-EBGaramond pb-3">Dobbelt Espresso</h3>
         <p class="text-18 font-LivvicRegular pr-2 md:pr-28">Èt shot af vores espresso blend med noter af bær og karamel fra Just Coffee</p>
@@ -105,7 +109,7 @@ import tomat from "../assets/images/tomatillu.webp";
       </div>
 
       <div class="col-span-2 md:col-span-1 flex justify-center pt-12 md:pr-52 pb-10 md:pb-16">
-        <Image src={matcha} alt="illustration af matcha kaffe og kaffebønner" class="w-56 h-48 md:w-56 md:h-48 " />
+        <Image src={matcha} alt="illustration af matcha kaffe og kaffebønner" class="w-56 h-48 md:w-52 md:h-44 " />
       </div>
     </div>
     <hr class="my-10 mx-4 border-color-mørkebrun">
@@ -113,10 +117,10 @@ import tomat from "../assets/images/tomatillu.webp";
 
 
   <!-- Mad -->
-  <section class="mad px-10 md:px-32 pt-spacing-lg-(mobil)">
-    <h2 class="text-36 font-EBGaramond pl-4 md:text-44 md:pl-20">Mad</h2>
+  <section class="mad px-10 md:px-32 pt-spacing-xl-(mobil)">
+    <h2 class="text-36 font-EBGaramond pl-4 md:text-44 md:pl-28">Mad</h2>
 
-    <div class="grid grid-cols-2 gap-x-8 gap-y-12 px-4 pt-16 md:pl-24 md:gap-y-14">
+    <div class="grid grid-cols-2 gap-x-8 gap-y-12 px-4 pt-16 md:pl-32 md:gap-y-14">
       <div>
         <h3 class="text-28 font-EBGaramond pb-3">Bolle m. ost</h3>
         <p class="text-18 font-LivvicRegular pr-2 md:pr-28">Surdejsbolle med hjemmerørt smør og vesterhavsost</p>
@@ -150,19 +154,155 @@ import tomat from "../assets/images/tomatillu.webp";
     </div>
     <hr class="my-10 mx-4 border-color-mørkebrun">
   </section>
+
+
+   <!-- Dessert -->
+   <section class="dessert px-10 md:px-32 pt-spacing-xl-(mobil)">
+    <h2 class="text-36 font-EBGaramond pl-4 md:text-44 md:pl-28">Dessert</h2>
+
+    <div class="grid grid-cols-2 gap-x-8 gap-y-12 px-4 pt-16 md:pl-32 md:gap-y-14">
+      <div>
+        <h3 class="text-28 font-EBGaramond pb-3">Kanelsnegl</h3>
+        <p class="text-18 font-LivvicRegular pr-2 md:pr-28">Hvedesnel bagt med kanel og smør</p>
+        <p class="text-18 font-LivvicRegular pt-2">38,-</p>
+      </div>
+    
+      <div>
+        <h3 class="text-28 font-EBGaramond pb-3">Cheesecake</h3>
+        <p class="text-18 font-LivvicRegular md:pr-28">Cremet Basque cheesecake med noter af karamel</p>
+        <p class="text-18 font-LivvicRegular pt-2">45,-</p>
+      </div>
+    
+      <div>
+        <h3 class="text-28 font-EBGaramond pb-3">Cookies</h3>
+        <p class="text-18 font-LivvicRegular pr-2 md:pr-28">Chokolade cookies med pistacie og havsalt</p>
+        <p class="text-18 font-LivvicRegular pt-2">38,-</p>
+      </div>    
+      <div class="col-span-2 md:col-span-1 flex justify-center pt-12 md:pr-52 pb-10 md:pb-16">
+        <Image src={kage} alt="illustration af matcha kaffe og kaffebønner" class="w-64 h-32 md:w-64 md:h-28 " />
+      </div>
+
+    </div>
+    <hr class="my-10 mx-4 border-color-mørkebrun">
+  </section>
  
+
+     <!-- Snack -->
+     <section class="snack px-10 md:px-32 pt-spacing-xl-(mobil)">
+      <h2 class="text-36 font-EBGaramond pl-4 md:text-44 md:pl-28">Snack</h2>
+  
+      <div class="grid grid-cols-2 gap-x-8 gap-y-12 px-4 pt-16 md:pl-32 md:gap-y-14">
+        <div>
+          <h3 class="text-28 font-EBGaramond pb-3">Røgede mandler </h3>
+          <p class="text-18 font-LivvicRegular pr-2 md:pr-28">Hjemmerøgede og letsaltede mandler </p>
+          <p class="text-18 font-LivvicRegular pt-2">30,-</p>
+        </div>
+      
+        <div>
+          <h3 class="text-28 font-EBGaramond pb-3">Oliven</h3>
+          <p class="text-18 font-LivvicRegular md:pr-28">Sprøde grønne oliven</p>
+          <p class="text-18 font-LivvicRegular pt-2">35,-</p>
+        </div>
+      
+        <div>
+          <h3 class="text-28 font-EBGaramond pb-3">Surdejsbrød</h3>
+          <p class="text-18 font-LivvicRegular pr-2 md:pr-28">Surdejsbrød med olivenolie</p>
+          <p class="text-18 font-LivvicRegular pt-2">38,-</p>
+        </div>    
+        <div class="col-span-2 md:col-span-1 flex justify-center pt-12 md:pr-52 pb-10 md:pb-16">
+          <Image src={oliven} alt="illustration af matcha kaffe og kaffebønner" class="w-48 h-44 md:w-48 md:h-44 " />
+        </div>
+  
+      </div>
+      <hr class="my-10 mx-4 border-color-mørkebrun">
+    </section>
  
 
 
+         <!-- Kolde drikke  -->
+     <section class="koldedrikke px-10 md:px-32 pt-spacing-xl-(mobil)">
+       <h2 class="text-36 font-EBGaramond pl-4 md:text-44 md:pl-28">Kolde drikke</h2>
+      
+       <div class="grid grid-cols-2 gap-x-8 gap-y-12 px-4 pt-16 md:pl-32 md:gap-y-16">
+          <div>
+           <h3 class="text-28 font-EBGaramond pb-3">Lemonade</h3>
+           <p class="text-18 font-LivvicRegular pr-2 md:pr-28">Forfriskende citron lemonade</p>
+           <p class="text-18 font-LivvicRegular pt-2">45,-</p>
+           </div>
+          
+           <div>
+            <h3 class="text-28 font-EBGaramond pb-3">Æblejuice </h3>
+            <p class="text-18 font-LivvicRegular md:pr-28">Kold æblejuice</p>
+            <p class="text-18 font-LivvicRegular pt-2">40,-</p>
+          </div>
+          
+          <div>
+            <h3 class="text-28 font-EBGaramond pb-3">Is-latte</h3>
+             <p class="text-18 font-LivvicRegular md:pr-28">Èt shot espresso i kold mælk og isterninger</p>
+            <p class="text-18 font-LivvicRegular pt-2">50,-</p>
+           </div>
+          
+          <div>
+            <h3 class="text-28 font-EBGaramond pb-3">Is-matcha </h3>
+             <p class="text-18 font-LivvicRegular pr-2 md:pr-28">Kold cremet islatte med matcha og isterninger </p>
+            <p class="text-18 font-LivvicRegular pt-2">65,-</p>
+          </div>  
+            
+          <div>
+            <h3 class="text-28 font-EBGaramond pb-3">Sirup</h3>
+            <p class="text-18 font-LivvicRegular pr-2 md:pr-28">Vanilje eller karamelsirup </p>
+            <p class="text-18 font-LivvicRegular pt-2">10,-</p>
+           </div> 
+            
+          <div class="col-span-2 md:col-span-1 flex justify-center pt-12 md:pr-72 pb-10 md:pb-16">
+              <Image src={lemonade} alt="illustration af matcha kaffe og kaffebønner" class="w-40 h-56 md:w-40 md:h-56 " />
+            </div>
+         </div>
+          <hr class="my-10 mx-4 border-color-mørkebrun">
+        </section>
+
+
+            <!-- Alkohol  -->
+     <section class="koldedrikke px-10 md:px-32 pt-spacing-xl-(mobil)">
+      <h2 class="text-36 font-EBGaramond pl-4 md:text-44 md:pl-28">Alkohol</h2>
+     
+      <div class="grid grid-cols-2 gap-x-8 gap-y-12 px-4 pt-16 md:pl-32 md:gap-y-20 md:gap-x-20">
+         <div>
+          <h3 class="text-28 font-EBGaramond pb-3">Orangevin</h3>
+          <p class="text-18 font-LivvicRegular pr-2 md:pr-28">Kølig naturvin af hvidvin lavet som rødvin</p>
+          <p class="text-18 font-LivvicRegular pt-2">75,-</p>
+          </div>
+         
+          <div>
+           <h3 class="text-28 font-EBGaramond pb-3">Hvidvin</h3>
+           <p class="text-18 font-LivvicRegular md:pr-28">Hvidvin med frugtnoter</p>
+           <p class="text-18 font-LivvicRegular pt-2">85,-</p>
+         </div>
+         
+         <div>
+           <h3 class="text-28 font-EBGaramond pb-3">Øl på flaske</h3>
+            <p class="text-18 font-LivvicRegular md:pr-28">Rådhuspilsner eller India Pale Ale</p>
+           <p class="text-18 font-LivvicRegular pt-2">50,-</p>
+          </div>
+         
+         <div>
+           <h3 class="text-28 font-EBGaramond pb-3">Fadøl</h3>
+            <p class="text-18 font-LivvicRegular pr-2 md:pr-28">Session India Pale Ale (mild) </p>
+           <p class="text-18 font-LivvicRegular pt-2">65,-</p>
+         </div>  
+           
+         <div class="hidden md:block"></div>
+
+         <div class="col-span-2 md:col-span-1 flex justify-center pt-12 md:pr-72 pb-10 md:pb-16 md:pt-5">
+             <Image src={vin} alt="illustration af matcha kaffe og kaffebønner" class="w-28 h-64 md:w-28 md:h-64 " />
+           </div>
+        </div>
+       </section>
 
 
 
 
 
-
-  <!-- <div class="col-span-2 md:col-span-2 flex justify-center pt-12 md:pb-16 md:pl-72">
-    <Image src={tomat} alt="illustration af matcha kaffe og kaffebønner" class="w-44 h-52" />
-  </div> -->
 
 
 
