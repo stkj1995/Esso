@@ -4,6 +4,7 @@ import Nyhedsbrev from "../components/Nyhedsbrev.astro";
 import { Image } from 'astro:assets';
 import menuhero from "../assets/images/hero_menu.webp";
 import matcha from "../assets/images/matchaillu.webp";
+import tomat from "../assets/images/tomatillu.webp";
 ---
 
 <MainLayout title="Menu">
@@ -34,10 +35,7 @@ import matcha from "../assets/images/matchaillu.webp";
 
   <!-- varme drikke -->
   <section class="varmedrikke px-10 md:px-32">
-    <h2 class="text-36 font-EBGaramond md:text-44 md:pl-20">Varme drikke</h2>
-
-
-
+    <h2 class="text-36 font-EBGaramond pl-3 md:text-44 md:pl-20">Varme drikke</h2>
 
     <div class="grid grid-cols-2 gap-x-8 gap-y-12 px-4 pt-16 md:pl-24 md:gap-y-14">
       <div>
@@ -106,12 +104,53 @@ import matcha from "../assets/images/matchaillu.webp";
         <p class="text-18 font-LivvicRegular pt-2">5,-</p>
       </div>
 
-      <div class="col-span-2 md:col-span-1 flex justify-center pt-12 md:pr-52 md:pb-16">
-        <Image src={matcha} alt="illustration af matcha kaffe og kaffebønner" class="w-56 h-52" />
+      <div class="col-span-2 md:col-span-1 flex justify-center pt-12 md:pr-52 pb-10 md:pb-16">
+        <Image src={matcha} alt="illustration af matcha kaffe og kaffebønner" class="w-56 h-48 md:w-56 md:h-48 " />
       </div>
     </div>
     <hr class="my-10 mx-4 border-color-mørkebrun">
   </section>
+
+
+  <!-- Mad -->
+  <section class="mad px-10 md:px-32 pt-spacing-lg-(mobil)">
+    <h2 class="text-36 font-EBGaramond pl-4 md:text-44 md:pl-20">Mad</h2>
+
+    <div class="grid grid-cols-2 gap-x-8 gap-y-12 px-4 pt-16 md:pl-24 md:gap-y-14">
+      <div>
+        <h3 class="text-28 font-EBGaramond pb-3">Bolle m. ost</h3>
+        <p class="text-18 font-LivvicRegular pr-2 md:pr-28">Surdejsbolle med hjemmerørt smør og vesterhavsost</p>
+        <p class="text-18 font-LivvicRegular pt-2">38,-</p>
+      </div>
+    
+      <div>
+        <h3 class="text-28 font-EBGaramond pb-3">Grillet toast m. comté</h3>
+        <p class="text-18 font-LivvicRegular md:pr-28">Vælg imellem to slags fyld- Syltede svampe eller skinke</p>
+        <p class="text-18 font-LivvicRegular pt-2">85,-</p>
+      </div>
+    
+      <div>
+        <h3 class="text-28 font-EBGaramond pb-3">Salat</h3>
+        <p class="text-18 font-LivvicRegular pr-2 md:pr-28">Caprese salat med tomat, mozzarella og olivenolie</p>
+        <p class="text-18 font-LivvicRegular pt-2">90,-</p>
+      </div>
+
+      <div>
+        <h3 class="text-28 font-EBGaramond pb-3">Yoghurt m. granola</h3>
+        <p class="text-18 font-LivvicRegular md:pr-28">Cremet græsk yoghurt toppet med sprød granola og æble kompot </p>
+        <p class="text-18 font-LivvicRegular pt-2">75,-</p>
+      </div>   
+
+      <div class="hidden md:block"></div>
+      
+      <div class="col-span-2 md:col-span-1 flex justify-center pt-12 md:pr-52 pb-10 md:pb-16">
+        <Image src={tomat} alt="illustration af matcha kaffe og kaffebønner" class="w-44 h-48 md:w-44 md:h-48 " />
+      </div>
+
+    </div>
+    <hr class="my-10 mx-4 border-color-mørkebrun">
+  </section>
+ 
  
 
 
@@ -121,7 +160,9 @@ import matcha from "../assets/images/matchaillu.webp";
 
 
 
-
+  <!-- <div class="col-span-2 md:col-span-2 flex justify-center pt-12 md:pb-16 md:pl-72">
+    <Image src={tomat} alt="illustration af matcha kaffe og kaffebønner" class="w-44 h-52" />
+  </div> -->
 
 
 
