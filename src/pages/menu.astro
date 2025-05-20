@@ -2,7 +2,7 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import Nyhedsbrev from "../components/Nyhedsbrev.astro";
 import { Image } from 'astro:assets';
-import menuhero from "../assets/images/hero_menu.webp";
+import menuhero from "../assets/images/menuhero.webp";
 import matcha from "../assets/images/matchaillu.webp";
 import tomat from "../assets/images/tomatillu.webp";
 import kage from "../assets/images/kageillu.webp";
@@ -16,12 +16,12 @@ import espresso from "../assets/images/espressotrio.webp";
 
 <MainLayout title="Menu">
   <!-- OBS: NYT HERO IMAGE!!!  -->
-  <section class="pb-48">
+  <section class="pb-20">
     <div class="relative">
       <Image 
-                src={menuhero} alt='billede af cheesecake' class="h-[515px] w-[350px] scale-150 md:max-h-[600px] md:w-[1152px] object-cover md:object-cover"/>
-    <div class="absolute inset-0 text-center pt-24 md:pt-56  md:mt-20 m-20 mt-52 md:m-0">
-    <h1 class="text-44 md:text-52 font-EBGaramond md:mb-[-40px] mb-10 text-color-mørkebrun">Menu</h1>
+                src={menuhero} alt='billede af cheesecake' class="h-[550px] w-full object-cover md:max-h-[600px] md:w-[1152px] md:object-cover"/>
+    <div class="absolute inset-0 text-center pt-10 md:pt-56  md:mt-20 m-20 mt-52 md:m-0">
+    <h1 class="text-44 md:text-52 font-EBGaramond md:mb-[-40px] mb-10 text-color-mørkebrun font-semibold">Menu</h1>
     </div>
     </div>
   </section>
