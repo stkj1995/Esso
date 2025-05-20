@@ -303,8 +303,8 @@ import espresso from "../assets/images/espressotrio.webp";
        </section>
 
 
-       <section class="pt-spacing-6xl-(mobil) px-16">
          <!-- Lidt ekstra til hjemmet -->
+       <section class="pt-spacing-6xl-(mobil) px-10 pb-spacing-6xl-(mobil)">
           <div>
             <h1 class="text-44 font-EBGaramond">Lidt ekstra til hjemmet </h1>
             <p class="pt-spacing-xl-(mobil) text-18 font-LivvicRegular">Kan du ikke få nok af vores kaffe? <br> Nu kan du tage favoritterne med hjem! Kom forbi caféen og køb vores kaffeposer fra Just Coffee, så du kan nyde caféens smag, når som helst.</p>
@@ -316,46 +316,41 @@ import espresso from "../assets/images/espressotrio.webp";
         
       
      
-        <div class="grid grid-cols-1 gap-y-32  md:grid md:grid-cols-3 md:gap-x-8 md:gap-y-12 ">
-             <!-- 1. card -->
-           <div>
-              <div class="place-items-center pb-spacing-xl-(mobil)">
-                <Image src={mexico} alt="illustration af matcha kaffe og kaffebønner" class="w-72 h-72 object-cover rounded-border-radius-25" />
-              </div>
-              <div class="">
-                <h3 class="text-28 font-EBGaramond pb-spacing-m-(mobil)">Mexicansk kaffe</h3>
-                <p class="text-18 font-LivvicRegular pr-10">Vores kaffe fra Oaxaca, Mexico har en frisk syrlighed balanceret med en cremet fylde. Den har en ren smag med uimodståelig aroma af ristede nødder og er en højlands arabicakaffe.</p>
-              </div>
-           </div>
-
-
-
-          <!-- 2. card -->
+        <div class="grid grid-cols-1 gap-y-32 md:grid-cols-3 md:gap-x-8 md:gap-y-12">
+          <!-- Card 1 -->
           <div>
-            <div class="place-items-center pb-spacing-xl-(mobil)">
-              <Image src={sologmaane} alt="illustration af matcha kaffe og kaffebønner" class="w-72 h-72 object-cover rounded-border-radius-25" />
+            <div class="flex justify-center pb-10">
+              <Image src={mexico} alt="Mexicansk kaffe" class="w-80 h-80 object-cover rounded-[25px]" />
             </div>
-            <div>
-              <h3 class="text-28 font-EBGaramond pb-spacing-m-(mobil)">Espresso Sol og Måne</h3>
+            <div class="px-4">
+              <h3 class="text-28 font-EBGaramond pb-4">Mexicansk kaffe</h3>
+              <p class="text-18 font-LivvicRegular">Vores kaffe fra Oaxaca, Mexico har en frisk syrlighed balanceret med en cremet fylde. Den har en ren smag med uimodståelig aroma af ristede nødder og er en højlands arabicakaffe.</p>
+            </div>
+          </div>
+        
+          <!-- Card 2 -->
+          <div>
+            <div class="flex justify-center pb-10">
+              <Image src={sologmaane} alt="Espresso Sol og Måne" class="w-72 h-72 object-cover rounded-[25px]" />
+            </div>
+            <div class="px-4">
+              <h3 class="text-28 font-EBGaramond pb-4">Espresso Sol og Måne</h3>
               <p class="text-18 font-LivvicRegular">En intens og fyldig espressoblanding med lækker crema og tydelig sødme. Fremstillet af 100% højlandsarabicabønner for en dyb og karakterfuld oplevelse i koppen.</p>
             </div>
-        </div>
-
-
-
-            <!-- 3. card -->
-          <div>
-              <div class="place-items-center pb-spacing-xl-(mobil)">
-                <Image src={espresso} alt="illustration af matcha kaffe og kaffebønner" class="w-72 h-72 object-cover rounded-border-radius-25" />
-              </div>
-              <div>
-                <h3 class="text-28 font-EBGaramond pb-spacing-m-(mobil)">Espresso Trio</h3>
-                <p class="text-18 font-LivvicRegular">En kompleks og elegant espresso lavet på bønner fra Etiopien, Papua Ny Guinea og Honduras. Hver bønne ristes separat for at fremhæve aromaen – resultatet er en blød og sødmefuld espresso med mild syrlighed og noter af tørrede bær.</p>
-              </div>
           </div>
-         
-  
+        
+          <!-- Card 3 -->
+          <div>
+            <div class="flex justify-center pb-10">
+              <Image src={espresso} alt="Espresso Trio" class="w-72 h-72 object-cover rounded-[25px]" />
+            </div>
+            <div class="px-4">
+              <h3 class="text-28 font-EBGaramond pb-4">Espresso Trio</h3>
+              <p class="text-18 font-LivvicRegular">En kompleks og elegant espresso lavet på bønner fra Etiopien, Papua Ny Guinea og Honduras. Hver bønne ristes separat for at fremhæve aromaen – resultatet er en blød og sødmefuld espresso med mild syrlighed og noter af tørrede bær.</p>
+            </div>
+          </div>
         </div>
+        
 
 
 
