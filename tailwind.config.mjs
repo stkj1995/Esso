@@ -21,11 +21,11 @@ export default {
     },
 
     lineHeight: {
-    28: ['28px'],
-    38: ['38px'],
-    48: ['48px'], // tilføjet 19/5
-    56: ['56px'], // tilføjet 19/5
-  },
+      28: ["28px"],
+      38: ["38px"],
+      48: ["48px"], // tilføjet 19/5
+      56: ["56px"], // tilføjet 19/5
+    },
 
     fontWeight: {
       regular: "400",
@@ -82,6 +82,8 @@ export default {
         "spacing-7xl": "240px",
         "spacing-8xl": "280px",
       },
+
+      backgroundImage: { pimg1: 'url("../assets/images/menuhero.webp")', pimg2: 'url("/images/img7.webp")' },
     },
   },
 
