@@ -9,7 +9,9 @@ import kage from "../assets/images/kageillu.webp";
 import oliven from "../assets/images/oliven.webp";
 import lemonade from "../assets/images/lemonadeillu.webp";
 import vin from "../assets/images/vinillu.webp";
-import mexico from "../assets/images/justcoffee_mexico.webp";
+import mexico from "../assets/images/mexico.webp";
+import sologmaane from "../assets/images/sologmaane.webp";
+import espresso from "../assets/images/espressotrio.webp";
 ---
 
 <MainLayout title="Menu">
@@ -272,7 +274,7 @@ import mexico from "../assets/images/justcoffee_mexico.webp";
           <h3 class="text-28 font-EBGaramond pb-3">Orangevin</h3>
           <p class="text-18 font-LivvicRegular pr-2 md:pr-28">Kølig naturvin af hvidvin lavet som rødvin</p>
           <p class="text-18 font-LivvicRegular pt-2">75,-</p>
-          </div>
+         </div>
          
           <div>
            <h3 class="text-28 font-EBGaramond pb-3">Hvidvin</h3>
@@ -301,23 +303,68 @@ import mexico from "../assets/images/justcoffee_mexico.webp";
        </section>
 
 
-       <!-- Lidt ekstra til hjemmet -->
-        <div class="pt-spacing-6xl-(mobil) px-16">
-          <h1 class="text-44 font-EBGaramond">Lidt ekstra til hjemmet </h1>
-          <p class="pt-spacing-xl-(mobil) text-18 font-LivvicRegular">Kan du ikke få nok af vores kaffe? <br> Nu kan du tage favoritterne med hjem! Kom forbi caféen og køb vores kaffeposer fra Just Coffee, så du kan nyde caféens smag, når som helst.</p>
-        </div>
-
-        <div class="grid px-16 pt-spacing-4xl-(mobil)">
-          <div class="class">
-            <h2 class="text-36 font-EBGaramond">Kaffeposer</h2>
-            <div class="grid place-items-center">
-              <Image src={mexico} alt="illustration af matcha kaffe og kaffebønner" class="w-52 h-60 object-cover rounded-border-radius-25" />
-            </div>
+       <section class="pt-spacing-6xl-(mobil) px-16">
+         <!-- Lidt ekstra til hjemmet -->
+          <div>
+            <h1 class="text-44 font-EBGaramond">Lidt ekstra til hjemmet </h1>
+            <p class="pt-spacing-xl-(mobil) text-18 font-LivvicRegular">Kan du ikke få nok af vores kaffe? <br> Nu kan du tage favoritterne med hjem! Kom forbi caféen og køb vores kaffeposer fra Just Coffee, så du kan nyde caféens smag, når som helst.</p>
           </div>
-
-
-
+  
+        <div class="pt-spacing-4xl-(mobil) pb-spacing-2xl-(mobil)">
+          <h2 class="text-36 font-EBGaramond">Kaffeposer</h2>
         </div>
+        
+
+     
+        <div class="grid grid-cols-1 gap-y-32 md:grid md:grid-cols-3 md:gap-x-8 md:gap-y-12 ">
+             <!-- 1. card -->
+           <div>
+              <div class="place-items-center pb-spacing-xl-(mobil)">
+                <Image src={mexico} alt="illustration af matcha kaffe og kaffebønner" class="w-72 h-72 object-cover rounded-border-radius-25" />
+              </div>
+              <div class="">
+                <h3 class="text-28 font-EBGaramond pb-spacing-m-(mobil)">Mexicansk kaffe</h3>
+                <p class="text-18 font-LivvicRegular pr-10">Vores kaffe fra Oaxaca, Mexico har en frisk syrlighed balanceret med en cremet fylde. Den har en ren smag med uimodståelig aroma af ristede nødder og er en højlands arabicakaffe.</p>
+              </div>
+           </div>
+
+
+
+          <!-- 2. card -->
+          <div>
+            <div class="place-items-center pb-spacing-xl-(mobil)">
+              <Image src={sologmaane} alt="illustration af matcha kaffe og kaffebønner" class="w-72 h-72 object-cover rounded-border-radius-25" />
+            </div>
+            <div>
+              <h3 class="text-28 font-EBGaramond pb-spacing-m-(mobil)">Espresso Sol og Måne</h3>
+              <p class="text-18 font-LivvicRegular">En intens og fyldig espressoblanding med lækker crema og tydelig sødme. Fremstillet af 100% højlandsarabicabønner for en dyb og karakterfuld oplevelse i koppen.</p>
+            </div>
+        </div>
+
+
+
+            <!-- 3. card -->
+          <div>
+              <div class="place-items-center pb-spacing-xl-(mobil)">
+                <Image src={espresso} alt="illustration af matcha kaffe og kaffebønner" class="w-72 h-72 object-cover rounded-border-radius-25" />
+              </div>
+              <div>
+                <h3 class="text-28 font-EBGaramond pb-spacing-m-(mobil)">Espresso Trio</h3>
+                <p class="text-18 font-LivvicRegular">En kompleks og elegant espresso lavet på bønner fra Etiopien, Papua Ny Guinea og Honduras. Hver bønne ristes separat for at fremhæve aromaen – resultatet er en blød og sødmefuld espresso med mild syrlighed og noter af tørrede bær.</p>
+              </div>
+          </div>
+         
+  
+        </div>
+
+
+
+
+
+
+
+       </section>
+      
 
 
 
