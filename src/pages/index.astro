@@ -26,8 +26,34 @@ const {variant= "primary" , size= "medium"} = Astro.props;
 ---
 <MainLayout title="Forside">
 
-  <!-- Hero med stemningsvideo -->
- </section>
+<!-- Hero med stemningsvideo med parallax -->
+<section class="relative h-screen overflow-hidden">
+  <!-- Parallax-wrapper med video + pil -->
+  <div class="absolute inset-0 -z-10 will-change-transform" style="transform: translateY(calc(var(--scroll, 0) * 0.5));">
+    <video
+      src="/ny-esso-hero-stemning.mp4"
+      autoplay
+      loop
+      muted
+      class="h-screen object-cover pb-spacing-5xl space-y-spacing-ml-(mobil) md:w-screen md:space-y-spacing-6xl"
+    ></video>
+
+    <!-- Pilen følger videoens scroll -->
+    <div class="absolute bottom-40 left-1/2 transform -translate-x-1/2">
+      <a href="#velkommen">
+        <img
+          src="/pilned.svg"
+          alt="Scroll ned"
+          class="w-12 h-12 cursor-pointer scroll-smooth"
+        />
+      </a>
+    </div>
+  </div>
+</section>
+
+
+ <!-- Original hero uden effekt - Hero med stemningsvideo -->
+ <!-- </section>
   <div class="video">
         <video src="/ny-esso-hero-stemning.mp4" autoplay loop muted class="h-screen object-cover pb-spacing-5xl space-y-spacing-ml-(mobil) md:w-screen md:space-y-spacing-6xl"></video>
       </div>    
@@ -41,11 +67,10 @@ const {variant= "primary" , size= "medium"} = Astro.props;
     />
   </a>
 </div>
-
-  </section>
+  </section> -->
 
  <!-- Kort intro og billeder -->
-<section id="velkommen" class="flex flex-col-reverse md:flex-row py-0 px-0 md:pl-20 md:space-y-spacing-xs md:space-x-spacing-5xl items-center max-w-7xl mx-auto">
+<section id="velkommen" class="flex flex-col-reverse md:flex-row py-0 px-0 md:pl-20 md:pt-40 pt-28 md:space-y-spacing-xs md:space-x-spacing-5xl items-center max-w-7xl mx-auto">
   <div>
     <Image
       src={ForsideKaffe}
@@ -232,6 +257,14 @@ const {variant= "primary" , size= "medium"} = Astro.props;
 </section>
 
   </section>
+
+  <script>
+  // Enkel JS-parallax til video
+  window.addEventListener('scroll', () => {
+    const scroll = window.scrollY;
+    document.documentElement.style.setProperty('--scroll', scroll + 'px');
+  });
+</script>
 
   <Formular />
 
