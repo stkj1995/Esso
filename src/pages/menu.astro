@@ -55,7 +55,7 @@ import espresso from "../assets/images/espressotrio.webp";
 
 
   <!-- varme drikke -->
-  <section class="varmedrikke px-10 md:px-32">
+  <section class="afsnit1 varmedrikke px-10 md:px-32">
     <h2 class="text-36 font-EBGaramond pl-3 md:text-44 md:pl-28">Varme drikke</h2>
 
     <div class="grid grid-cols-2 gap-x-10 gap-y-12 px-4 pt-16 md:pl-32 md:gap-y-14">
@@ -134,7 +134,7 @@ import espresso from "../assets/images/espressotrio.webp";
 
 
   <!-- Mad -->
-  <section class="mad px-10 md:px-32 pt-spacing-xl-(mobil)">
+  <section class="afsnit2 px-10 md:px-32 pt-spacing-xl-(mobil)">
     <h2 class="text-36 font-EBGaramond pl-4 md:text-44 md:pl-28">Mad</h2>
 
     <div class="grid grid-cols-2 gap-x-10 gap-y-12 px-4 pt-16 md:pl-32 md:gap-y-14">
@@ -174,7 +174,7 @@ import espresso from "../assets/images/espressotrio.webp";
 
 
    <!-- Dessert -->
-   <section class="dessert px-10 md:px-32 pt-spacing-xl-(mobil)">
+   <section class="afsnit3 px-10 md:px-32 pt-spacing-xl-(mobil)">
     <h2 class="text-36 font-EBGaramond pl-4 md:text-44 md:pl-28">Dessert</h2>
 
     <div class="grid grid-cols-2 gap-x-10 gap-y-12 px-4 pt-16 md:pl-32 md:gap-y-14">
@@ -205,7 +205,7 @@ import espresso from "../assets/images/espressotrio.webp";
  
 
      <!-- Snack -->
-     <section class="snack px-10 md:px-32 pt-spacing-xl-(mobil)">
+     <section class="afsnit4 px-10 md:px-32 pt-spacing-xl-(mobil)">
       <h2 class="text-36 font-EBGaramond pl-4 md:text-44 md:pl-28">Snack</h2>
   
       <div class="grid grid-cols-2 gap-x-10 gap-y-12 px-4 pt-16 md:pl-32 md:gap-y-14">
@@ -237,7 +237,7 @@ import espresso from "../assets/images/espressotrio.webp";
 
 
          <!-- Kolde drikke  -->
-     <section class="koldedrikke px-10 md:px-32 pt-spacing-xl-(mobil)">
+     <section class="afsnit5 px-10 md:px-32 pt-spacing-xl-(mobil)">
        <h2 class="text-36 font-EBGaramond pl-4 md:text-44 md:pl-28">Kolde drikke</h2>
       
        <div class="grid grid-cols-2 gap-x-10 gap-y-12 px-4 pt-16 md:pl-32 md:gap-y-16">
@@ -280,7 +280,7 @@ import espresso from "../assets/images/espressotrio.webp";
 
 
             <!-- Alkohol  -->
-     <section class="koldedrikke px-10 md:px-32 pt-spacing-xl-(mobil)">
+     <section class="afsnit6 px-10 md:px-32 pt-spacing-xl-(mobil)">
       <h2 class="text-36 font-EBGaramond pl-4 md:text-44 md:pl-28">Alkohol</h2>
      
       <div class="grid grid-cols-2 gap-x-10 gap-y-12 px-4 pt-16 md:pl-32 md:gap-y-20 md:gap-x-20">
@@ -320,7 +320,7 @@ import espresso from "../assets/images/espressotrio.webp";
 
 
          <!-- Lidt ekstra til hjemmet -->
-       <section class="pt-spacing-5xl-(mobil) px-10 pb-spacing-6xl-(mobil) md:px-32 md:pt-12">
+       <section class="afsnit7 pt-spacing-5xl-(mobil) px-10 pb-spacing-6xl-(mobil) md:px-32 md:pt-12">
           <div>
             <h1 class="text-44 font-EBGaramond">Lidt ekstra til hjemmet </h1>
             <p class="pt-spacing-xl-(mobil) text-18 font-LivvicRegular md:pr-80">Kan du ikke få nok af vores kaffe? Nu kan du tage favoritterne med hjem! <br> Kom forbi caféen og køb vores kaffeposer fra Just Coffee, så du kan nyde caféens smag, når som helst.</p>
@@ -366,41 +366,71 @@ import espresso from "../assets/images/espressotrio.webp";
             </div>
           </div>
         </div>
-        
-
-
-
-
-
-
-
        </section>
       
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <Nyhedsbrev></Nyhedsbrev>
 </MainLayout>
+
+
+<script>
+  import { inView } from "motion";
+      
+      const elementmedanimation1 = document.querySelector(".afsnit1");
+      
+      inView(elementmedanimation1, () => {
+      
+      elementmedanimation1.classList.add("animate__animated", "animate__fadeInUp");
+      
+      }); 
+
+      const elementmedanimation2 = document.querySelector(".afsnit2");
+      
+      inView(elementmedanimation2, () => {
+      
+      elementmedanimation2.classList.add("animate__animated", "animate__fadeInUp");
+      
+      }); 
+
+
+      const elementmedanimation3 = document.querySelector(".afsnit3");
+      
+      inView(elementmedanimation3, () => {
+      
+      elementmedanimation3.classList.add("animate__animated", "animate__fadeInUp");
+      
+      }); 
+
+      const elementmedanimation4 = document.querySelector(".afsnit4");
+      
+      inView(elementmedanimation4, () => {
+      
+      elementmedanimation4.classList.add("animate__animated", "animate__fadeInUp");
+      
+      }); 
+
+      const elementmedanimation5 = document.querySelector(".afsnit5");
+      
+      inView(elementmedanimation5, () => {
+      
+      elementmedanimation5.classList.add("animate__animated", "animate__fadeInUp");
+      
+      }); 
+
+
+      const elementmedanimation6 = document.querySelector(".afsnit6");
+      
+      inView(elementmedanimation6, () => {
+      
+      elementmedanimation6.classList.add("animate__animated", "animate__fadeInUp");
+      
+      }); 
+
+      const elementmedanimation7 = document.querySelector(".afsnit7");
+      
+      inView(elementmedanimation7, () => {
+      
+      elementmedanimation7.classList.add("animate__animated", "animate__fadeInUp");
+      
+      }); 
+
+  </script>
