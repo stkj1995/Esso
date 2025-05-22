@@ -26,9 +26,9 @@ const {variant= "primary" , size= "medium"} = Astro.props;
 ---
 <MainLayout title="Forside">
 
-<!-- Hero med stemningsvideo med parallax -->
+<!-- Hero med stemningsvideo -->
 <section class="relative h-screen overflow-hidden">
-  <!-- Parallax-wrapper med video + pil -->
+  <!-- Video-wrapper (parallax) -->
   <div class="absolute inset-0 -z-10 will-change-transform" style="transform: translateY(calc(var(--scroll, 0) * 0.5));">
     <video
       src="/ny-esso-hero-stemning.mp4"
@@ -37,20 +37,19 @@ const {variant= "primary" , size= "medium"} = Astro.props;
       muted
       class="h-screen object-cover pb-spacing-5xl space-y-spacing-ml-(mobil) md:w-screen md:space-y-spacing-6xl"
     ></video>
-
-    <!-- Pilen følger videoens scroll -->
-    <div class="absolute bottom-40 left-1/2 transform -translate-x-1/2">
-      <a href="#velkommen">
-        <img
-          src="/pilned.svg"
-          alt="Scroll ned"
-          class="w-12 h-12 cursor-pointer scroll-smooth"
-        />
-      </a>
-    </div>
   </div>
 </section>
 
+<!-- Pil udenfor video-sektion -->
+<div class="relative -mt-56 z-10 flex justify-center">
+  <a href="#velkommen">
+    <img
+      src="/pilned.svg"
+      alt="Scroll ned"
+      class="w-12 h-12 cursor-pointer scroll-smooth"
+    />
+  </a>
+</div>
 
  <!-- Original hero uden effekt - Hero med stemningsvideo -->
  <!-- </section>
@@ -268,16 +267,6 @@ const {variant= "primary" , size= "medium"} = Astro.props;
     <a href="https://www.instagram.com/esso_cph/" target="_blank"><Image src={Galleri8} alt="ottende billede på instagram" class="h-[200px] md:h-[250px] w-[200px] md:w-[250px] object-cover rounded-border-radius-25 transition-transform duration-300 transform hover:scale-105" /></a>
   </div>
 </section>
-
-  </section>
-
-  <script>
-  // Enkel JS-parallax til video
-  window.addEventListener('scroll', () => {
-    const scroll = window.scrollY;
-    document.documentElement.style.setProperty('--scroll', scroll + 'px');
-  });
-</script>
 
   <Formular />
 
