@@ -12,7 +12,7 @@ const {variant= "primary" , size= "medium"} = Astro.props;
 
 <MainLayout title="Kontakt">
 <!-- Formular.astro -->
-<section class="px-spacing-m pt-spacing-6xl pb-spacing-4xl">
+<section class="formular px-spacing-m pt-spacing-6xl pb-spacing-4xl">
   <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-spacing-m md:gap-spacing-5xl items-start">
     <!-- Venstre kolonne med tekst og formular -->
     <div>
@@ -72,7 +72,7 @@ const {variant= "primary" , size= "medium"} = Astro.props;
     </div>
 </section>
 
-<section class="text-color-mørkebrun px-spacing-m py-0 md:relative left-[-20px] md:my-spacing-2xl mb-spacing-6xl-(mobil)">
+<section class="info text-color-mørkebrun px-spacing-m py-0 md:relative left-[-20px] md:my-spacing-2xl mb-spacing-6xl-(mobil)">
   <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 md:gap-spacing-5xl gap-y-spacing-2xl-(mobil)">
 
     <!-- Følg os -->
@@ -128,3 +128,24 @@ const {variant= "primary" , size= "medium"} = Astro.props;
   <Formular />
 
 </MainLayout>
+
+<script>
+    import { inView } from "motion";
+        
+        const elementmedanimation1 = document.querySelector(".formular");
+        
+        inView(elementmedanimation1, () => {
+        
+        elementmedanimation1.classList.add("animate__animated", "animate__fadeInUp");
+        
+        }); 
+  
+        const elementmedanimation2 = document.querySelector(".info");
+        
+        inView(elementmedanimation2, () => {
+        
+        elementmedanimation2.classList.add("animate__animated", "animate__fadeInUp");
+        
+        }); 
+
+    </script>
