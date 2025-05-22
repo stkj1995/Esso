@@ -83,7 +83,7 @@ export default {
         "spacing-8xl": "280px",
       },
 
-      backgroundImage: { pimg1: 'url("../assets/images/menuhero.webp")', pimg2: 'url("../assets/images/omoshero_ny.webp")' },
+      backgroundImage: { pimg1: 'url("../assets/images/menuhero.webp")', pimg2: 'url("../assets/images/omosherony2.webp")' },
     },
   },
 
