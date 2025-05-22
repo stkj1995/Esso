@@ -18,15 +18,16 @@ import events from '../assets/images/events.webp';
 
 <MainLayout title="Om os">
       <section class="pb-20">
-        <div class="relative">
-          <div class="h-[550px] flex justify-center items-center bg-pimg2 bg-fixed bg-cover md:bg-center bg-no-repeat bg-center md:h-[630px]"></div>
+       <div class="relative">
+          <div class="h-[580px] flex justify-center items-center bg-pimg2 bg-fixed bg-cover object-[40%_50%] md:bg-center bg-no-repeat md:h-[630px]"></div>
        
-        <div class="absolute inset-0 text-center pt-24 md:pt-56  md:mt-20 m-20 mt-52 md:m-0">
-        <h1 class="text-44 md:text-52 font-EBGaramond md:mb-[-40px] mb-10 text-color-mørkebrun font-semibold md:font-semibold">Om os</h1>
-        </div>
-        </div>
+         <div class="absolute inset-0 text-center pl-10 pt-16 m-20 mt-52 md:pt-56  md:mt-20 md:m-0">
+             <h1 class="text-44 md:text-52 font-EBGaramond md:mb-[-40px] mb-10 text-color-mørkebrun font-semibold md:font-semibold">Om os</h1>
+         </div>
+       </div>
       </section>
 
+<!-- bg-bottom -->
 
       <!-- gammel kode for om os hero SKAL GEMMES  -->
       <!-- <section class="pb-44 md:pb-10">
@@ -43,7 +44,7 @@ import events from '../assets/images/events.webp';
 
       <!-- note: indsætte mx-16 (mobil) på mainlayout så alle sider har samme margin  -->
    <!-- En drøm i valby afsnit -->
-  <section class="pb-spacing-6xl-(mobil) md:pt-spacing-lg md:px-5">
+  <section class="droem pb-spacing-6xl-(mobil) md:pt-spacing-lg md:px-5">
     <div class="grid md:grid md:grid-cols-2 ">
         <div class="tekst_knap md:pt-20 md:pl-6">
             <div class="mx-10 md:mx-18 md:pl-12">
@@ -72,7 +73,7 @@ import events from '../assets/images/events.webp';
 
 
        <!-- Det der driver os afsnit ikke med rigtigt billede -->
-     <section class="pb-spacing-6xl-(mobil) md:pt-spacing-5xl md:pb-spacing-5xl md:pl-10 md:mx-18">
+     <section class="vaerdier pb-spacing-6xl-(mobil) md:pt-spacing-5xl md:pb-spacing-5xl md:pl-10 md:mx-18">
       <div class="grid md:grid md:grid-cols-2 md:gap-2">
         <div class="mx-10 md:order-1 md:pt-16">
           <h1 class="text-44 font-EBGaramond text-color-mørkebrun pb-spacing-ml-(mobil) md:text-52 md:pb-spacing-m">Det der driver os</h1>
@@ -89,45 +90,48 @@ import events from '../assets/images/events.webp';
 
 
           <!-- Citat afsnit -->
-     <section class="bg-color-creme pb-24 md:pb-24 md:py-12">
-        <div class="md:grid md:grid-cols-2 md:pl-16 md:gap-2">
-            <!-- illustrationer -->
-            <div class="grid grid-cols-2 pt-28 px-36 md:gap-3">
-                <div class="">
-                    <Image src={vin} alt="illustration af vinglas og vinflaske" class="w-28 md:w-36"/>
+          <section class="citat bg-color-creme pb-24 pt-10 md:py-12">
+            <div class="grid grid-cols-1 gap-10 md:grid-cols-2 md:pl-16 md:gap-2">
+              
+              <!-- illustrationer -->
+              <div class="grid grid-cols-2 px-6 pt-10 gap-4 justify-center items-center  md:px-36 md:gap-3">
+                <div class="flex justify-end">
+                  <Image src={vin} alt="illustration af vinglas og vinflaske" class="w-24 md:w-36" />
                 </div>
-                <div class="pt-16">
-                    <Image src={oliven} alt="illustration af vinglas og vinflaske" class=" w-[160px] md:w-48"/>
+                <div class="pt-10 flex justify-start">
+                  <Image src={oliven} alt="illustration af oliven" class="w-32 md:w-48" />
                 </div>
-             </div>
-            <!-- citat -->
-             <div class="citat px-10 pt-spacing-3xl-(mobil) md:pt-spacing-3xl">
-                <div class="pl-40 pb-14 md:pl-0 md:relative md:-left-20 md:pb-3">
-                    <Image src={citattegn1} alt="billede af citationstegn" class="ml-20"/>
+              </div>
+              
+              <!-- citat -->
+              <div class="px-6 pt-10 md:pt-24 md:px-0">
+                <div class="flex justify-center pb-10 md:pl-0 md:relative md:flex md:justify-start md:pb-3">
+                  <Image src={citattegn1} alt="citattegn" class="ml-10 md:ml-0" />
                 </div>
-
-                <div class="px-14 md:pr-40 md:text-28 md:pt-10 md:px-0">
-                    <h3 class="text-28 font-EBGaramond">Jeg har altid villet skabe mit eget – et sted, hvor man kan mærke æstetikken, møde ligesindede og få en oplevelse med alle sanser.</h3>
+          
+                <div class="pt-6">
+                  <h3 class="text-28 md:text-2xl font-EBGaramond px-4 md:px-0 md:pr-40">
+                    Jeg har altid villet skabe mit eget – et sted, hvor man kan mærke æstetikken, møde ligesindede og få en oplevelse med alle sanser.
+                  </h3>
                 </div>
-                <div class="pt-14 px-16 md:pt-10 md:px-0 md:pr-40">
-                    <h3 class="font-EBGaramond text-28">– Josephine, stifter af Esso</h3>
+          
+                <div class="pt-10 px-4 md:pt-10 md:px-0 md:pr-40">
+                  <h3 class="font-EBGaramond text-28 md:text-28">– Josephine, stifter af Esso</h3>
                 </div>
-                
-                  <div class="pl-40 pt-14 md:pl-80 md:pt-6">
-                    <Image src={citattegn2} alt="billede af citationstegn" class="ml-20"/>
+          
+                <div class="flex justify-center pt-10 md:pl-80 md:pt-6">
+                  <Image src={citattegn2} alt="citattegn" class="ml-10 md:mr-20" />
                 </div>
-             </div>
-        </div>
-        
-     </section>
-
-
+              </div>              
+            </div>
+          </section>
+          
 
 
     
          <!-- Esso x Kelding brew afsnit -->
           <!-- OBS: md:pt-spacing-7xl var md:pt-spacing-3xl før ændring  -->
-    <section class="pt-spacing-6xl-(mobil) mx-10 md:pt-spacing-5xl ">
+    <section class="keld pt-spacing-6xl-(mobil) mx-10 md:pt-spacing-5xl ">
         <div class="md:grid md:grid-cols-2">
             <div class="txt_knap md:pl-28 md:pt-20 ">
                 <h1 class="font-EBGaramond text-44 pb-spacing-ml-(mobil) md:pb-spacing-m md:text-52">Esso x Keldling Brew</h1>
@@ -146,9 +150,8 @@ import events from '../assets/images/events.webp';
                    </div>
                </a>
              </div>
-        
-        
-        <div class="img grid grid-cols-2 pt-spacing-4xl-(mobil) px-11 md:pr-14 ">
+    
+            <div class="img grid grid-cols-2 pt-spacing-4xl-(mobil) px-11 md:pr-14 ">
                 <div class="pt-20 md:pl-6">
                   <Image src={keld_bryg} alt="billede af grå øldåse" class="rounded-border-radius-25 object-cover w-52 h-[265px] md:w-56 md:h-[300px] md:object-cover" />
                 </div>
@@ -156,14 +159,21 @@ import events from '../assets/images/events.webp';
                   <Image src={oel3} alt="billede af to ølflasker" class="rounded-border-radius-25 w-full h-[340px] object-cover md:h-full md:object-cover"/>
                 </div>
          </div>
-
+              
+              
+        <!-- kode fra index tilpaset til billeder af øl flasker - vent med at slette  -->
+        <!-- <div class="flex space-x-6 md:w-[580px] w-full justify-center pt-spacing-4xl-(mobil) md:space-x-spacing-sm md:pt-0 md:">
+            <Image
+              src={keld_bryg} alt="billede af grå øldåse" class="h-[15%] w-[30%] object-cover object-[60%_115%] rounded-border-radius-25 md:h-[250px] md:w-[180px] md:mt-[350px] mt-spacing-2xl-(mobil) " />
+            <Image src={oel3} alt="billede af to ølflasker" class="h-[30%] w-[45%] mt-[-0px] object-cover object-[60%_115%] rounded-border-radius-25 md:h-[420px] md:w-[300px] md:mt-[250px] md:mb-spacing-6xl mb-spacing-5xl-(mobil)"/>
+          </div> -->
+         
         </div>
-
       </section>
 
 
           <!-- Events afsnit -->
-    <section class="pt-spacing-6xl-(mobil) pb-spacing-6xl-(mobil) md:pt-spacing-5xl md:pb-spacing-5xl ">
+    <section class="events pt-spacing-6xl-(mobil) pb-spacing-6xl-(mobil) md:pt-spacing-6xl md:pb-spacing-5xl ">
         <div class="grid md:grid md:grid-cols-2 md:pl-8 md:gap-2">
           <div class="mx-10 md:order-1 md:pt-16">
             <h1 class="text-44 font-EBGaramond text-color-mørkebrun pb-spacing-ml-(mobil) md:text-52 ">Events</h1>
@@ -181,3 +191,49 @@ import events from '../assets/images/events.webp';
  
 <Nyhedsbrev></Nyhedsbrev>
 </MainLayout>
+
+<script>
+    import { inView } from "motion";
+        
+        const elementmedanimation1 = document.querySelector(".droem");
+        
+        inView(elementmedanimation1, () => {
+        
+        elementmedanimation1.classList.add("animate__animated", "animate__fadeInUp");
+        
+        }); 
+  
+        const elementmedanimation2 = document.querySelector(".vaerdier");
+        
+        inView(elementmedanimation2, () => {
+        
+        elementmedanimation2.classList.add("animate__animated", "animate__fadeInUp");
+        
+        }); 
+  
+  
+        const elementmedanimation3 = document.querySelector(".citat");
+        
+        inView(elementmedanimation3, () => {
+        
+        elementmedanimation3.classList.add("animate__animated", "animate__fadeInUp");
+        
+        }); 
+  
+        const elementmedanimation4 = document.querySelector(".keld");
+        
+        inView(elementmedanimation4, () => {
+        
+        elementmedanimation4.classList.add("animate__animated", "animate__fadeInUp");
+        
+        }); 
+  
+        const elementmedanimation5 = document.querySelector(".events");
+        
+        inView(elementmedanimation5, () => {
+        
+        elementmedanimation5.classList.add("animate__animated", "animate__fadeInUp");
+        
+        }); 
+  
+    </script>
