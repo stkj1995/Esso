@@ -173,77 +173,77 @@ const {variant= "primary" , size= "medium"} = Astro.props;
     </div>
     </section>
 
- <!-- Afsnit om Esso + CTA-knap (mikro) til Om os -->
-<section class="omos bg-color-creme md:pl-20 py-10 md:min-h-[50vh] min-h-full items-center justify-center flex flex-col-reverse md:flex-row md:space-x-spacing-5xl px-0 space-y-spacing-2xl w-full mx-auto mt-spacing-xl-(mobil) md:mb-[-140px]">
-
+ <!-- Afsnit om Esso + CTA-knap -->
+<section class="omos bg-color-creme md:pl-20 py-10 md:h-[600px] min-h-full flex items-center justify-center flex-col-reverse md:flex-row md:space-x-spacing-5xl px-0 space-y-spacing-2xl w-full mx-auto mt-spacing-xl-(mobil) md:pb-20">
+  <!-- Billede -->
   <div>
     <Image
       src={ESSOfacade}
       alt="en kaffe bliver lavet"
-      class="h-[300px] w-[360px] object-cover object-[50%_70%] rounded-border-radius-25 md:h-[440px] md:w-[520px] md:space-y-spacing-ml md:mt-spacing-5xl mt-spacing-4xl-(mobil) md:ml-16"
+      class="h-[300px] w-[360px] object-cover object-[50%_70%] rounded-border-radius-25 md:h-[440px] md:w-[520px] md:mt-24 mt-spacing-4xl-(mobil) md:ml-16"
     />
   </div>
 
+  <!-- Tekst + CTA -->
   <div class="md:ml-20 md:w-2/5 w-4/5">
     <h1 class="text-left text-44 mb-8 font-EBGaramond font-medium md:leading-56 leading-48 md:text-52 md:w-4/5 md:mt-spacing-2xl">
-    Din lokale café i Valby
-  </h1>
+      Din lokale café i Valby
+    </h1>
     <p class="text-left font-LivvicRegular text-18 font-regular leading-28 md:text-18 mb-10 md:w-4/5 md:pr-0 pr-0">
-    Hos Esso finder du mere end bare god kaffe. Vi har skabt et sted med kvalitet og atmosfære, hvor alle er velkomne, og hverdagen får lov at trække vejret. Kom forbi og mærk stemningen selv. <br>
-  Her handler det om ægthed. Et sted, hvor mennesker mødes, ideer opstår og stemninger får lov at gro.
+      Hos Esso finder du mere end bare god kaffe. Vi har skabt et sted med kvalitet og atmosfære, hvor alle er velkomne, og hverdagen får lov at trække vejret. Kom forbi og mærk stemningen selv. <br />
+      Her handler det om ægthed. Et sted, hvor mennesker mødes, ideer opstår og stemninger får lov at gro.
     </p>
 
-     <!-- CTA-knap til Om os -->
-        <a href="/omos">
-         <div class="flex justify-center md:hidden">
-                  <Button  type="submit" variant="secondary", size="small" >Læs mere om os</Button>
-                </div>
-                <!-- OBS: knap variant til desktop -->
-                <div class="md:flex md:justify-start md:pt-spacing-s hidden md:pl-0 md:mx-0">
-                  <Button  type="submit" variant="secondary", size="medium" >Læs mere om os</Button>
-                 </div>
-        </a>
-        </div>
+    <!-- CTA-knap -->
+    <a href="/omos">
+      <div class="flex justify-center md:hidden">
+        <Button type="submit" variant="secondary" size="small">Læs mere om os</Button>
+      </div>
+      <div class="md:flex md:justify-start md:pt-spacing-s hidden md:pl-0 md:mx-0">
+        <Button type="submit" variant="secondary" size="medium">Læs mere om os</Button>
+      </div>
+    </a>
   </div>
 </section>
 
-  <!-- Afsnit om Menuen + CTA (makro) til Menu -->
-<section class="udvalg bg-color-creme pt-0 md:pt-0 flex flex-col-reverse md:flex-row items-center justify-center md:space-x-spacing-2xl px-0 space-y-spacing-2xl w-full mx-auto">
-<div class="md:ml-20 md:w-2/6 w-4/5 order-2 md:order-1">
-  <h1 class="text-left text-44 mb-8 font-EBGaramond font-medium md:leading-56 leading-48 md:text-52 mt-spacing-5xl-(mobil) md:mt-0">
-    Smag du kan tage med hjem
-  </h1>
-  <p class="text-left font-LivvicRegular text-18 font-regular leading-28 md:text-18 mb-spacing-xl-(mobil) pr-20">
-    Ud over frisklavet kaffe og hjemmelavet bagværk byder vi også på naturlige vine, nøje udvalgte produkter og små delikatesser. Alt er udvalgt med omtanke både til dig selv, til middagsbordet eller som en særlig gave. <br> Tag lidt af Esso med hjem og forlæng følelsen – også uden for caféens fysiske rum.
-  </p>
+<!-- Afsnit om Menuen + CTA -->
+<section class="udvalg bg-color-creme flex items-center justify-center flex-col-reverse md:flex-row md:space-x-spacing-7 px-0 space-y-spacing-2xl w-full mx-auto md:h-[600px] md:pb-52">
+  <!-- Tekst + CTA -->
+  <div class="md:ml-20 md:w-2/5 w-4/5 order-2 md:order-1 md:pr-10">
+    <h1 class="text-left text-44 mb-8 font-EBGaramond font-medium md:leading-56 leading-48 md:text-52 md:mt-20">
+      Smag du kan tage med hjem
+    </h1>
+    <p class="text-left font-LivvicRegular text-18 font-regular leading-28 md:text-18 mb-10 md:pr-10 pr-0">
+      Ud over frisklavet kaffe og hjemmelavet bagværk byder vi også på naturlige vine, nøje udvalgte produkter og små delikatesser. Alt er udvalgt med omtanke både til dig selv, til middagsbordet eller som en særlig gave. <br />
+      Tag lidt af Esso med hjem og forlæng følelsen – også uden for caféens fysiske rum.
+    </p>
 
-  <!-- CTA-knap -->
-  <a href="/menu">
-         <div class="flex justify-center md:hidden">
-                  <Button  type="submit" variant="primary", size="small" >Se caféens udvalg</Button>
-                </div>
-                <!-- OBS: knap variant til desktop -->
-                <div class="md:flex md:justify-start md:pt-spacing-s hidden md:pl-0 md:mx-0">
-                  <Button  type="submit" variant="primary", size="medium" >Se caféens udvalg</Button>
-                 </div>
-        </div>
-      </a>
-</div>
+    <!-- CTA-knap -->
+    <a href="/menu">
+      <div class="flex justify-center md:hidden">
+        <Button type="submit" variant="primary" size="small">Se caféens udvalg</Button>
+      </div>
+      <div class="md:flex md:justify-start md:pt-spacing-s hidden md:pl-0 md:mx-0">
+        <Button type="submit" variant="primary" size="medium">Se caféens udvalg</Button>
+      </div>
+    </a>
+  </div>
 
-<!-- Billeder -->
-<div class="flex space-x-6 md:w-[580px] w-full justify-center md:space-x-spacing-sm order-1 md:order-2">
-  <Image
-    src={Mexico}
-    alt="en kaffe bliver lavet"
-    class="h-[15%] w-[30%] object-cover object-[60%_115%] rounded-border-radius-25 md:h-[250px] md:w-[180px] md:mt-[350px] mt-spacing-2xl-(mobil) "
-  />
-  <Image
-    src={SolMaane}
-    alt="interiør af café"
-    class="h-[30%] w-[45%] mt-[-0px] object-cover object-[60%_115%] rounded-border-radius-25 md:h-[420px] md:w-[300px] md:mt-[250px] md:mb-spacing-6xl mb-spacing-5xl-(mobil)"
-  />
-</div>
+  <!-- Billeder -->
+  <div class="flex space-x-spacing-sm md:w-[580px] w-full justify-center order-1 md:order-2">
+    <Image
+      src={Mexico}
+      alt="en kaffe bliver lavet"
+      class="h-[250px] w-[180px] object-cover object-[60%_115%] rounded-border-radius-25 mt-[350px]"
+    />
+    <Image
+      src={SolMaane}
+      alt="interiør af café"
+      class="h-[420px] w-[300px] object-cover object-[60%_115%] rounded-border-radius-25 mt-[250px] mb-spacing-6xl"
+    />
+  </div>
 </section>
+
 
  <!-- Instagram Feed -->
 <section class="instagram flex flex-col items-left text-left md:text-left mb-spacing-2xl md:mt-spacing-4xl mt-spacing-2xl px-spacing-m max-w-[1200px] mx-auto">
