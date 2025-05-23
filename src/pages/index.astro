@@ -26,31 +26,31 @@ const {variant= "primary" , size= "medium"} = Astro.props;
 ---
 <MainLayout title="Forside">
 
-<!-- Hero med stemningsvideo med parallax -->
+<!-- Hero med stemningsvideo -->
 <section class="relative h-screen overflow-hidden">
-  <!-- Parallax-wrapper med video + pil -->
+  <!-- Video-wrapper (parallax) -->
   <div class="absolute inset-0 -z-10 will-change-transform" style="transform: translateY(calc(var(--scroll, 0) * 0.5));">
     <video
       src="/ny-esso-hero-stemning.mp4"
       autoplay
       loop
       muted
+      playsinline
       class="h-screen object-cover pb-spacing-5xl space-y-spacing-ml-(mobil) md:w-screen md:space-y-spacing-6xl"
     ></video>
-
-    <!-- Pilen følger videoens scroll -->
-    <div class="absolute bottom-40 left-1/2 transform -translate-x-1/2">
-      <a href="#velkommen">
-        <img
-          src="/pilned.svg"
-          alt="Scroll ned"
-          class="w-12 h-12 cursor-pointer scroll-smooth"
-        />
-      </a>
-    </div>
   </div>
 </section>
 
+<!-- Pil udenfor video-sektion -->
+<div class="relative -mt-56 z-10 flex justify-center">
+  <a href="#velkommen">
+    <img
+      src="/pilned.svg"
+      alt="Scroll ned"
+      class="w-12 h-12 cursor-pointer scroll-smooth"
+    />
+  </a>
+</div>
 
  <!-- Original hero uden effekt - Hero med stemningsvideo -->
  <!-- </section>
@@ -70,12 +70,12 @@ const {variant= "primary" , size= "medium"} = Astro.props;
   </section> -->
 
  <!-- Kort intro og billeder -->
-<section id="velkommen" class="flex flex-col-reverse md:flex-row py-0 px-0 md:pl-20 md:pt-40 pt-28 md:space-y-spacing-xs md:space-x-spacing-5xl items-center max-w-7xl mx-auto">
+<section id="velkommen" class="intro flex flex-col-reverse md:flex-row py-0 px-0 md:pl-20 md:pt-40 pt-28 md:space-y-spacing-xl md:space-x-spacing-5xl items-center max-w-7xl mx-auto">
   <div>
     <Image
       src={ForsideKaffe}
       alt="en kaffe bliver lavet"
-      class="h-[380px] w-[380px] object-cover object-[40%_88%] rounded-border-radius-25 md:h-[530px] md:w-[530px]"
+      class="h-[380px] w-[380px] object-cover object-[40%_88%] rounded-border-radius-25 md:h-[530px] md:w-[530px] md:mt-10"
     />
   </div>
 
@@ -93,7 +93,7 @@ const {variant= "primary" , size= "medium"} = Astro.props;
 </section>
 
   <!-- CTA -->
-  <section class="min-h-screen items-center justify-center flex flex-col md:flex-row py-20 px-4 md:space-x-spacing-7xl mt-spacing-m-(mobil) w-full max-w-[1350px] mx-auto md:mt-[110px]">
+  <section class="trebilleder min-h-screen items-center justify-center flex flex-col md:flex-row py-20 px-4 md:space-x-spacing-7xl mt-spacing-m-(mobil) w-full max-w-[1350px] mx-auto md:mt-[110px]">
 
     <!-- Overskrift -->
     <div class="md:w-6/7 w-4/5 mt-0 ">
@@ -160,80 +160,92 @@ const {variant= "primary" , size= "medium"} = Astro.props;
       </p>
 
       <!-- CTA-knap -->
-       <div class="flex justify-center md:justify-start mt-spacing-m">
-          <a href="/menu">
-        <Button variant="primary" size="md:medium small">Se vores menu</Button>
-      </a>
-      </div>
-
+       <a href="/menu">
+        <div class="flex justify-center md:hidden">
+                  <Button  type="submit" variant="primary", size="small" >Se vores menu</Button>
+                </div>
+                <!-- OBS: knap variant til desktop -->
+                <div class="md:flex md:justify-start md:pt-spacing-s hidden md:pl-0 md:mx-0">
+                  <Button  type="submit" variant="primary", size="medium" >Se vores menu</Button>
+                 </div>
+        </a>
+        </div>
     </div>
     </section>
 
- <!-- Afsnit om Esso + CTA-knap (mikro) til Om os -->
-<section class="bg-color-creme md:pl-20 py-10 md:min-h-[50vh] min-h-full items-center justify-center flex flex-col-reverse md:flex-row md:space-x-spacing-5xl px-0 space-y-spacing-2xl w-full mx-auto mt-spacing-xl-(mobil) md:mb-[-140px]">
-
+ <!-- Afsnit om Esso + CTA-knap -->
+<section class="omos bg-color-creme md:pl-20 pb-28 md:h-750px] min-h-full flex items-center justify-center flex-col-reverse md:flex-row md:space-x-spacing-5xl px-0 space-y-spacing-4xl w-full mx-auto mt-spacing-xl-(mobil) md:pb-20">
+  <!-- Billede -->
   <div>
     <Image
       src={ESSOfacade}
       alt="en kaffe bliver lavet"
-      class="h-[300px] w-[360px] object-cover object-[50%_70%] rounded-border-radius-25 md:h-[440px] md:w-[580px] md:space-y-spacing-ml md:mt-spacing-5xl mt-spacing-4xl-(mobil) md:ml-10"
+      class="h-[260px] w-[360px] object-cover object-[50%_70%] rounded-border-radius-25 md:h-[440px] md:w-[520px] md:mt-28 mt-spacing-4xl-(mobil) md:ml-16"
     />
   </div>
 
+  <!-- Tekst + CTA -->
   <div class="md:ml-20 md:w-2/5 w-4/5">
-    <h1 class="text-left text-44 mb-8 font-EBGaramond font-medium md:leading-56 leading-48 md:text-52 md:w-4/5 md:mt-spacing-2xl">
-    Din lokale café i Valby
-  </h1>
-    <p class="text-left font-LivvicRegular text-18 font-regular leading-28 md:text-18 mb-10 md:w-4/5 md:pr-0 pr-0">
-    Hos Esso finder du mere end bare god kaffe. Vi har skabt et sted med kvalitet og atmosfære, hvor alle er velkomne, og hverdagen får lov at trække vejret. Kom forbi og mærk stemningen selv. <br>
-  Her handler det om ægthed. Et sted, hvor mennesker mødes, ideer opstår og stemninger får lov at gro.
+    <h1 class="text-left text-44 mb-8 font-EBGaramond font-medium md:leading-56 leading-48 md:text-52 md:w-4/5">
+      Din lokale café i Valby
+    </h1>
+    <p class="text-left font-LivvicRegular text-18 font-regular leading-28 md:text-18 md:mb-0 mb-10 md:w-4/5 md:pr-0 pr-0">
+      Hos Esso finder du mere end bare god kaffe. Vi har skabt et sted med kvalitet og atmosfære, hvor alle er velkomne, og hverdagen får lov at trække vejret. Kom forbi og mærk stemningen selv. <br />
+      Her handler det om ægthed. Et sted, hvor mennesker mødes, ideer opstår og stemninger får lov at gro.
     </p>
 
-     <!-- CTA-knap til Om os -->
-        <div class="flex justify-center md:justify-start mt-spacing-m">
-          <a href="/omos">
-      <Button variant="secondary" size="md:medium small">Læs mere om os</Button>
-      </a>
+    <!-- CTA-knap -->
+    <a href="/omos">
+      <div class="flex justify-center md:hidden">
+        <Button type="submit" variant="secondary" size="small">Læs mere om os</Button>
       </div>
+      <div class="md:flex md:justify-start md:pt-spacing-m hidden md:pl-0 md:mx-0">
+        <Button type="submit" variant="secondary" size="medium">Læs mere om os</Button>
+      </div>
+    </a>
+</section>
 
+<!-- Afsnit om Menuen + CTA -->
+<section class="udvalg bg-color-creme flex items-center justify-center flex-col-reverse md:flex-row md:space-x-spacing-7 pt-0 space-y-spacing-xl w-full h-full mx-auto md:h-[750px] md:pb-0">
+  <!-- Tekst + CTA -->
+  <div class="md:ml-20 md:w-2/5 w-4/5 order-2 md:order-1 md:pr-10 md:pt-0 pt-16">
+    <h1 class="text-left text-44 mb-8 font-EBGaramond font-medium md:leading-56 leading-48 md:text-52 md:mt-0">
+      Smag du kan tage med hjem
+    </h1>
+    <p class="text-left font-LivvicRegular text-18 font-regular leading-28 md:text-18 mb-10 md:pr-10 pr-0 md:w-5/6">
+      Ud over frisklavet kaffe og hjemmelavet bagværk byder vi også på naturlige vine, nøje udvalgte produkter og små delikatesser. Alt er udvalgt med omtanke både til dig selv, til middagsbordet eller som en særlig gave. <br />
+      Tag lidt af Esso med hjem og forlæng følelsen – også uden for caféens fysiske rum.
+    </p>
+
+    <!-- CTA-knap -->
+    <a href="/menu">
+      <div class="flex justify-center md:hidden">
+        <Button type="submit" variant="primary" size="small">Se caféens udvalg</Button>
+      </div>
+      <div class="md:flex md:justify-start md:pt-spacing-s hidden md:pl-0 md:mx-0">
+        <Button type="submit" variant="primary" size="medium">Se caféens udvalg</Button>
+      </div>
+    </a>
+  </div>
+
+  <!-- Billeder -->
+  <div class="flex space-x-spacing-sm md:w-[580px] w-full justify-center order-1 md:order-2">
+    <Image
+      src={Mexico}
+      alt="en kaffe bliver lavet"
+      class="h-[200px] w-[140px] md:h-[250px] md:w-[180px] object-cover object-[60%_115%] rounded-border-radius-25 md:mt-[200px] mt-[80px]"
+    />
+    <Image
+      src={SolMaane}
+      alt="interiør af café"
+      class="h-[290px] w-[200px] md:h-[430px] md:w-[300px] object-cover object-[60%_115%] rounded-border-radius-25 md:mt-[100px] mt-[40px] mb-spacing-4xl"
+    />
   </div>
 </section>
 
-  <!-- Afsnit om Menuen + CTA (makro) til Menu -->
- <section class="bg-color-creme min-h-[0vh] flex flex-col-reverse md:flex-row items-center justify-center md:space-x-spacing-2xl px-0 space-y-spacing-2xl w-full mx-auto ">
-<div class="md:ml-20 md:w-2/6 w-4/5 order-2 md:order-1">
-  <h1 class="text-left text-44 mb-8 font-EBGaramond font-medium md:leading-56 leading-48 md:text-52 mt-spacing-5xl-(mobil) md:mt-spacing-0">
-    Smag du kan tage med hjem
-  </h1>
-  <p class="text-left font-LivvicRegular text-18 font-regular leading-28 md:text-18 mb-spacing-xl-(mobil) pr-20">
-    Ud over frisklavet kaffe og hjemmelavet bagværk byder vi også på naturlige vine, nøje udvalgte produkter og små delikatesser. Alt er udvalgt med omtanke både til dig selv, til middagsbordet eller som en særlig gave. <br> Tag lidt af Esso med hjem og forlæng følelsen – også uden for caféens fysiske rum.
-  </p>
-
-  <!-- CTA-knap -->
-  <div class="flex justify-center md:justify-start mt-spacing-m">
-          <a href="/menu">
-       <Button variant="primary" size="md:medium small">Se caféens udvalg</Button>
-      </a>
-      </div>
-</div>
-
-<!-- Billeder -->
-<div class="flex space-x-6 md:w-[580px] w-full justify-center md:space-x-spacing-sm order-1 md:order-2">
-  <Image
-    src={Mexico}
-    alt="en kaffe bliver lavet"
-    class="h-[15%] w-[30%] object-cover object-[60%_115%] rounded-border-radius-25 md:h-[250px] md:w-[180px] md:mt-[350px] mt-spacing-2xl-(mobil) "
-  />
-  <Image
-    src={SolMaane}
-    alt="interiør af café"
-    class="h-[30%] w-[45%] mt-[-0px] object-cover object-[60%_115%] rounded-border-radius-25 md:h-[420px] md:w-[300px] md:mt-[250px] md:mb-spacing-6xl mb-spacing-5xl-(mobil)"
-  />
-</div>
-</section>
 
  <!-- Instagram Feed -->
-<section class="flex flex-col items-left text-left md:text-left mb-spacing-2xl md:mt-spacing-4xl mt-spacing-2xl px-spacing-m max-w-[1200px] mx-auto">
+<section class="instagram flex flex-col items-left text-left md:text-left mb-spacing-2xl md:mt-spacing-4xl mt-spacing-2xl px-spacing-m max-w-[1200px] mx-auto">
   <h1 class="text-44 md:text-52 font-EBGaramond font-medium mb-spacing-xs ">
     Følg med på vores instagram
   </h1>
@@ -257,16 +269,52 @@ const {variant= "primary" , size= "medium"} = Astro.props;
   </div>
 </section>
 
-  </section>
-
-  <script>
-  // Enkel JS-parallax til video
-  window.addEventListener('scroll', () => {
-    const scroll = window.scrollY;
-    document.documentElement.style.setProperty('--scroll', scroll + 'px');
-  });
-</script>
-
   <Formular />
 
 </MainLayout>
+
+<script>
+    import { inView } from "motion";
+        
+        const elementmedanimation1 = document.querySelector(".intro");
+        
+        inView(elementmedanimation1, () => {
+        
+        elementmedanimation1.classList.add("animate__animated", "animate__fadeInUp");
+        
+        }); 
+  
+        const elementmedanimation2 = document.querySelector(".trebilleder");
+        
+        inView(elementmedanimation2, () => {
+        
+        elementmedanimation2.classList.add("animate__animated", "animate__fadeInUp");
+        
+        }); 
+  
+  
+        const elementmedanimation3 = document.querySelector(".omos");
+        
+        inView(elementmedanimation3, () => {
+        
+        elementmedanimation3.classList.add("animate__animated", "animate__fadeInUp");
+        
+        }); 
+  
+        const elementmedanimation4 = document.querySelector(".udvalg");
+        
+        inView(elementmedanimation4, () => {
+        
+        elementmedanimation4.classList.add("animate__animated", "animate__fadeInUp");
+        
+        }); 
+  
+        const elementmedanimation5 = document.querySelector(".instagram");
+        
+        inView(elementmedanimation5, () => {
+        
+        elementmedanimation5.classList.add("animate__animated", "animate__fadeInUp");
+        
+        }); 
+  
+    </script>

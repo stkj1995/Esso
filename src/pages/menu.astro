@@ -40,22 +40,51 @@ import espresso from "../assets/images/espressotrio.webp";
 
 
   <div class="px-16 pt-6 pb-spacing-5xl-(mobil) md:px-28 md:pt-spacing-3xl-(mobil)">
-    <h1 class="text-44 font-EBGaramond text-center md:text-44">Kom forbi og smag på vores hjemmelavede udvalg
+    <h1 class="text-36 font-EBGaramond text-center md:text-44">Kom forbi og smag på vores hjemmelavede udvalg
       <br> Spørg venligst ved allergener</h1>
-    
 
-      <!-- eksempel på knapper for at scroll ned til kategorier se på desktop-->
-      <!-- <a href="">
-        <div class="md:pt-20 md:pl-10">
-          <button class="bg-white font-EBGaramond text-20 border border-color-mørkebrun md:px-8 md:py-3 rounded-border-radius-25 md:border-2 md:hover:bg-color-mørkebrun md:hover:text-white md:transition md:ease-in-out md:hover:scale-110"> Varme drikke</button>
+      <!-- Menu-knapper scroller til katergorier -->
+    <div class="hidden md:grid grid-cols-7 gap-6 px-20 pt-20">
+      <a href="#varmedrikke" class="text-center">
+        <div class="scroll-smooth w-36 h-12 flex items-center justify-center bg-white font-EBGaramond text-18 border-color-mørkebrun rounded-border-radius-25 border-2 hover:bg-color-mørkebrun hover:text-white transition ease-in-out hover:scale-110">
+          Varme drikke
         </div>
-      </a> -->
-
+      </a>
+      <a href="#mad" class="text-center">
+        <div class="scroll-smooth w-36 h-12 flex items-center justify-center bg-white font-EBGaramond text-18 border-color-mørkebrun rounded-border-radius-25 border-2 hover:bg-color-mørkebrun hover:text-white transition ease-in-out hover:scale-110">
+          Mad
+        </div>
+      </a>
+      <a href="#dessert" class="text-center">
+        <div class="scroll-smooth w-36 h-12 flex items-center justify-center bg-white font-EBGaramond text-18 border-color-mørkebrun rounded-border-radius-25 border-2 hover:bg-color-mørkebrun hover:text-white transition ease-in-out hover:scale-110">
+          Dessert
+        </div>
+      </a>
+      <a href="#snacks" class="text-center">
+        <div class="scroll-smooth w-36 h-12 flex items-center justify-center bg-white font-EBGaramond text-18 border-color-mørkebrun rounded-border-radius-25 border-2 hover:bg-color-mørkebrun hover:text-white transition ease-in-out hover:scale-110">
+          Snacks
+        </div>
+      </a>
+      <a href="#koldedrikke" class="text-center">
+        <div class="scroll-smooth w-36 h-12 flex items-center justify-center bg-white font-EBGaramond text-18 border-color-mørkebrun rounded-border-radius-25 border-2 hover:bg-color-mørkebrun hover:text-white transition ease-in-out hover:scale-110">
+          Kolde drikke
+        </div>
+      </a>
+      <a href="#alkohol" class="text-center">
+        <div class="scroll-smooth w-36 h-12 flex items-center justify-center bg-white font-EBGaramond text-18 border-color-mørkebrun rounded-border-radius-25 border-2 hover:bg-color-mørkebrun hover:text-white transition ease-in-out hover:scale-110">
+          Alkohol
+        </div>
+      </a>
+      <a href="#kaffeposer" class="text-center">
+        <div class="scroll-smooth w-36 h-12 flex items-center justify-center bg-white font-EBGaramond text-18 border-color-mørkebrun rounded-border-radius-25 border-2 hover:bg-color-mørkebrun hover:text-white transition ease-in-out hover:scale-110">
+          Kaffeposer
+        </div>
+      </a>
+    </div>
   </div>
 
-
   <!-- varme drikke -->
-  <section class="afsnit1 varmedrikke px-10 md:px-32">
+  <section id="varmedrikke" class="afsnit1 varmedrikke px-10 md:px-32">
     <h2 class="text-36 font-EBGaramond pl-3 md:text-44 md:pl-28">Varme drikke</h2>
 
     <div class="grid grid-cols-2 gap-x-10 gap-y-12 px-4 pt-16 md:pl-32 md:gap-y-14">
@@ -134,7 +163,7 @@ import espresso from "../assets/images/espressotrio.webp";
 
 
   <!-- Mad -->
-  <section class="afsnit2 px-10 md:px-32 pt-spacing-xl-(mobil)">
+  <section id="mad" class="afsnit2 px-10 md:px-32 pt-spacing-xl-(mobil)">
     <h2 class="text-36 font-EBGaramond pl-4 md:text-44 md:pl-28">Mad</h2>
 
     <div class="grid grid-cols-2 gap-x-10 gap-y-12 px-4 pt-16 md:pl-32 md:gap-y-14">
@@ -174,7 +203,7 @@ import espresso from "../assets/images/espressotrio.webp";
 
 
    <!-- Dessert -->
-   <section class="afsnit3 px-10 md:px-32 pt-spacing-xl-(mobil)">
+   <section id="dessert" class="afsnit3 px-10 md:px-32 pt-spacing-xl-(mobil)">
     <h2 class="text-36 font-EBGaramond pl-4 md:text-44 md:pl-28">Dessert</h2>
 
     <div class="grid grid-cols-2 gap-x-10 gap-y-12 px-4 pt-16 md:pl-32 md:gap-y-14">
@@ -204,9 +233,9 @@ import espresso from "../assets/images/espressotrio.webp";
   </section>
  
 
-     <!-- Snack -->
-     <section class="afsnit4 px-10 md:px-32 pt-spacing-xl-(mobil)">
-      <h2 class="text-36 font-EBGaramond pl-4 md:text-44 md:pl-28">Snack</h2>
+     <!-- Snacks -->
+     <section id="snacks" class="afsnit4 px-10 md:px-32 pt-spacing-xl-(mobil)">
+      <h2 class="text-36 font-EBGaramond pl-4 md:text-44 md:pl-28">Snacks</h2>
   
       <div class="grid grid-cols-2 gap-x-10 gap-y-12 px-4 pt-16 md:pl-32 md:gap-y-14">
         <div>
@@ -237,7 +266,7 @@ import espresso from "../assets/images/espressotrio.webp";
 
 
          <!-- Kolde drikke  -->
-     <section class="afsnit5 px-10 md:px-32 pt-spacing-xl-(mobil)">
+     <section id="koldedrikke" class="afsnit5 px-10 md:px-32 pt-spacing-xl-(mobil)">
        <h2 class="text-36 font-EBGaramond pl-4 md:text-44 md:pl-28">Kolde drikke</h2>
       
        <div class="grid grid-cols-2 gap-x-10 gap-y-12 px-4 pt-16 md:pl-32 md:gap-y-16">
@@ -293,7 +322,7 @@ import espresso from "../assets/images/espressotrio.webp";
 
 
             <!-- Alkohol  -->
-     <section class="afsnit6 px-10 md:px-32 pt-spacing-xl-(mobil)">
+     <section id="alkohol" class="afsnit6 px-10 md:px-32 pt-spacing-xl-(mobil)">
       <h2 class="text-36 font-EBGaramond pl-4 md:text-44 md:pl-28">Alkohol</h2>
      
       <div class="grid grid-cols-2 gap-x-10 gap-y-12 px-4 pt-16 md:pl-32 md:gap-y-20 md:gap-x-20">
@@ -338,7 +367,7 @@ import espresso from "../assets/images/espressotrio.webp";
 
 
          <!-- Lidt ekstra til hjemmet -->
-       <section class="afsnit7 pt-spacing-5xl-(mobil) px-10 pb-spacing-6xl-(mobil) md:px-32 md:pt-12 md:pl-60">
+       <section id="kaffeposer" class="afsnit7 pt-spacing-5xl-(mobil) px-10 pb-spacing-6xl-(mobil) md:px-32 md:pt-12 md:pl-60">
           <div>
             <h1 class="text-44 font-EBGaramond">Lidt ekstra til hjemmet </h1>
             <p class="pt-spacing-xl-(mobil) text-18 font-LivvicRegular md:pr-80">Kan du ikke få nok af vores kaffe? Nu kan du tage favoritterne med hjem! <br> Kom forbi caféen og køb vores kaffeposer fra Just Coffee, så du kan nyde caféens smag, når som helst.</p>
