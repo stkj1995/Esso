@@ -24,31 +24,39 @@ const {variant= "primary" , size= "medium"} = Astro.props;
         Udfyld blot kontaktformularen – så vender vi tilbage til dig så hurtigt vi kan.
       </p>
 
-      <form class="space-y-6">
-        <div>
-          <label for="navn" class="block text-color-mørkebrun mb-1">Navn</label>
-          <input
-            type="text"
-            id="navn"
-            name="navn"
-            class="w-full border-0 border-b border-color-mørkebrun bg-transparent focus:outline-none focus:ring-0 focus:border-color-lysebrun py-2"
-          />
-        </div>
+    <form class="space-y-6">
+  <div>
+    <label for="navn" class="block text-color-mørkebrun mb-1">Navn</label>
+    <input
+      type="text"
+      id="navn"
+      name="navn"
+      class="w-full border-0 border-b border-color-mørkebrun bg-transparent focus:outline-none focus:ring-0 focus:border-color-lysebrun py-2"
+    />
+  </div>
 
-        <div>
-          <label for="email" class="block text-color-mørkebrun mb-1">Email</label>
-          <input
-          type="email"
-          id="email"
-          name="email"
-          class="w-full border-0 border-b border-color-mørkebrun bg-transparent focus:outline-none focus:ring-0 focus:border-color-lysebrun py-2"
-        />
-        </div>
+  <div>
+    <label for="email" class="block text-color-mørkebrun mb-1">Email</label>
+    <input
+      type="email"
+      id="email"
+      name="email"
+      class="w-full border-0 border-b border-color-mørkebrun bg-transparent focus:outline-none focus:ring-0 focus:border-color-lysebrun py-2"
+    />
+  </div>
 
-        <div>
-          <label for="besked" class="block text-color-mørkebrun mb-1"></label>
-          <textarea id="besked" name="besked" rows="6" placeholder="Skriv din besked her..." class="w-full border border-color-mørkebrun rounded-lg bg-transparent my-spacing-s-(mobil) p-3 focus:outline-none"></textarea>
-        </div>
+  <div>
+    <label for="besked" class="sr-only">Besked</label>
+    <textarea
+      id="besked"
+      name="besked"
+      rows="6"
+      placeholder="Skriv din besked her..."
+      class="w-full border border-color-mørkebrun rounded-lg bg-transparent my-spacing-s-(mobil) p-3 focus:outline-none"
+    ></textarea>
+  </div>
+</form>
+
 
    <!-- Flex-container omkring send-knappen -->
     <div class="flex justify-center md:justify-start mt-spacing-m">

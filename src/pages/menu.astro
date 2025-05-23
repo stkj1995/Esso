@@ -43,7 +43,7 @@ import espresso from "../assets/images/espressotrio.webp";
     <h1 class="text-36 font-EBGaramond text-center md:text-44">Kom forbi og smag på vores hjemmelavede udvalg
       <br> Spørg venligst ved allergener</h1>
 
-       <!-- Mobil: Dropdown-knapper -->
+    <!-- Mobil: Dropdown-knapper -->
     <div x-data="{ open: false }" class="relative md:hidden px-4 pt-10">
       <button @click="open = !open"
         class="w-full h-12 bg-color-hvid text-color-mørkebrun border-2 border-color-mørkebrun rounded-border-radius-25 font-EBGaramond text-18 px-4 flex justify-between items-center">
@@ -54,16 +54,18 @@ import espresso from "../assets/images/espressotrio.webp";
             d="M19 9l-7 7-7-7" />
         </svg>
       </button>
-      <div x-show="open" class="absolute ml-14 w-[200px] text-center bg-color-hvid mt-2 border-2 border-color-mørkebrun z-50 rounded-border-radius-25">
-        <a href="#varmedrikke" class="block px-4 py-2 hover:bg-color-creme transition rounded-border-radius-25">Varme drikke</a>
-        <a href="#mad" class="block px-4 py-2 hover:bg-color-creme transition">Mad</a>
-        <a href="#dessert" class="block px-4 py-2 hover:bg-color-creme transition">Dessert</a>
-        <a href="#snacks" class="block px-4 py-2 hover:bg-color-creme transition">Snacks</a>
-        <a href="#koldedrikke" class="block px-4 py-2 hover:bg-color-creme transition">Kolde drikke</a>
-        <a href="#alkohol" class="block px-4 py-2 hover:bg-color-creme transition">Alkohol</a>
-        <a href="#kaffeposer" class="block px-4 py-2 hover:bg-color-creme transition rounded-border-radius-25">Kaffeposer</a>
+
+      <div x-show="open" class="absolute ml-0 w-full text-center bg-color-hvid mt-2 border-2 border-color-mørkebrun z-50 rounded-border-radius-25">
+        <a @click="open = false" href="#varmedrikke" class="block px-4 py-2 hover:bg-color-creme transition rounded-border-radius-25">Varme drikke</a>
+        <a @click="open = false" href="#mad" class="block px-4 py-2 hover:bg-color-creme transition">Mad</a>
+        <a @click="open = false" href="#dessert" class="block px-4 py-2 hover:bg-color-creme transition">Dessert</a>
+        <a @click="open = false" href="#snacks" class="block px-4 py-2 hover:bg-color-creme transition">Snacks</a>
+        <a @click="open = false" href="#koldedrikke" class="block px-4 py-2 hover:bg-color-creme transition">Kolde drikke</a>
+        <a @click="open = false" href="#alkohol" class="block px-4 py-2 hover:bg-color-creme transition">Alkohol</a>
+        <a @click="open = false" href="#kaffeposer" class="block px-4 py-2 hover:bg-color-creme transition rounded-border-radius-25">Kaffeposer</a>
       </div>
     </div>
+
 
     <!-- Desktop: Grid menu -->
     <div class="hidden md:grid md:grid-cols-7 gap-4 md:gap-6 px-4 md:px-20 pt-10 md:pt-20">
