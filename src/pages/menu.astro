@@ -44,9 +44,9 @@ import espresso from "../assets/images/espressotrio.webp";
       <br> Spørg venligst ved allergener</h1>
 
     <!-- Mobil: Dropdown-knapper -->
-    <div x-data="{ open: false }" class="relative md:hidden px-4 pt-10">
+    <div x-data="{ open: false }" class="relative md:hidden px-4 pt-10 ">
       <button @click="open = !open"
-        class="w-full h-12 bg-color-hvid text-color-mørkebrun border-2 border-color-mørkebrun rounded-border-radius-25 font-EBGaramond text-18 px-4 flex justify-between items-center">
+        class="w-64 h-12 bg-color-hvid text-color-mørkebrun border-2 border-color-mørkebrun rounded-border-radius-25 font-EBGaramond text-18 px-4 flex justify-between items-center ">
         Vælg kategori
         <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"
           viewBox="0 0 24 24">
@@ -55,7 +55,7 @@ import espresso from "../assets/images/espressotrio.webp";
         </svg>
       </button>
 
-      <div x-show="open" class="absolute ml-0 w-full text-center bg-color-hvid mt-2 border-2 border-color-mørkebrun z-50 rounded-border-radius-25">
+      <div x-show="open" class="absolute ml-0 w-64 text-center bg-color-hvid mt-2 border-2 border-color-mørkebrun z-50 rounded-border-radius-25">
         <a @click="open = false" href="#varmedrikke" class="block px-4 py-2 hover:bg-color-creme transition rounded-border-radius-25">Varme drikke</a>
         <a @click="open = false" href="#mad" class="block px-4 py-2 hover:bg-color-creme transition">Mad</a>
         <a @click="open = false" href="#dessert" class="block px-4 py-2 hover:bg-color-creme transition">Dessert</a>
