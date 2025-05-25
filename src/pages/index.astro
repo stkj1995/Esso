@@ -174,39 +174,49 @@ const {variant= "primary" , size= "medium"} = Astro.props;
     </section>
 
  <!-- Afsnit om Esso + CTA-knap -->
-<section class="omos bg-color-creme md:pl-20 pb-28 md:h-750px] min-h-full flex items-center justify-center flex-col-reverse md:flex-row md:space-x-spacing-5xl px-0 space-y-spacing-4xl w-full mx-auto mt-spacing-xl-(mobil) md:pb-20">
-  <!-- Billede -->
-  <div>
-    <Image
-      src={ESSOfacade}
-      alt="caféen set udefra"
-      class="h-[260px] w-[360px] object-cover object-[50%_70%] rounded-border-radius-25 md:h-[440px] md:w-[520px] md:mt-28 mt-spacing-4xl-(mobil) md:ml-16"
-    />
+<section class="relative min-h-screen w-full overflow-hidden">
+  <!-- Fast cremet baggrund -->
+  <div class="absolute inset-0 z-0 bg-color-creme"></div>
+
+  <!-- Indhold -->
+  <div class="relative z-10 omos md:pl-20 pb-28 md:min-h-[750px] min-h-full flex items-center justify-center flex-col-reverse md:flex-row md:space-x-spacing-5xl px-0 space-y-spacing-4xl w-full mx-auto mt-spacing-xl-(mobil) md:pb-32 mb-14">
+    
+    <!-- Billede -->
+    <div>
+      <Image
+        src={ESSOfacade}
+        alt="caféen set udefra"
+        class="h-[260px] w-[360px] object-cover object-[50%_70%] rounded-border-radius-25 md:h-[440px] md:w-[520px] md:mt-28 mt-spacing-4xl-(mobil) md:ml-16"
+      />
+    </div>
+
+    <!-- Tekst + CTA -->
+    <div class="md:ml-20 md:w-2/5 w-4/5">
+      <h1 class="text-left text-44 mb-8 font-EBGaramond font-medium md:leading-56 leading-48 md:text-52 md:w-4/5">
+        Din lokale café i Valby
+      </h1>
+      <p class="text-left font-LivvicRegular text-18 font-regular leading-28 md:text-18 md:mb-0 mb-10 md:w-4/5 md:pr-0 pr-0">
+        Hos Esso finder du mere end bare god kaffe. Vi har skabt et sted med kvalitet og atmosfære, hvor alle er velkomne, og hverdagen får lov at trække vejret. Kom forbi og mærk stemningen selv. <br />
+        Her handler det om ægthed. Et sted, hvor mennesker mødes, ideer opstår og stemninger får lov at gro.
+      </p>
+
+      <!-- CTA-knap -->
+      <a href="/omos">
+        <div class="flex justify-center md:hidden">
+          <Button type="submit" variant="secondary" size="small">Læs mere om os</Button>
+        </div>
+        <div class="md:flex md:justify-start md:pt-spacing-m hidden md:pl-0 md:mx-0">
+          <Button type="submit" variant="secondary" size="medium">Læs mere om os</Button>
+        </div>
+      </a>
+    </div>
+
   </div>
-
-  <!-- Tekst + CTA -->
-  <div class="md:ml-20 md:w-2/5 w-4/5">
-    <h1 class="text-left text-44 mb-8 font-EBGaramond font-medium md:leading-56 leading-48 md:text-52 md:w-4/5">
-      Din lokale café i Valby
-    </h1>
-    <p class="text-left font-LivvicRegular text-18 font-regular leading-28 md:text-18 md:mb-0 mb-10 md:w-4/5 md:pr-0 pr-0">
-      Hos Esso finder du mere end bare god kaffe. Vi har skabt et sted med kvalitet og atmosfære, hvor alle er velkomne, og hverdagen får lov at trække vejret. Kom forbi og mærk stemningen selv. <br />
-      Her handler det om ægthed. Et sted, hvor mennesker mødes, ideer opstår og stemninger får lov at gro.
-    </p>
-
-    <!-- CTA-knap -->
-    <a href="/omos">
-      <div class="flex justify-center md:hidden">
-        <Button type="submit" variant="secondary" size="small">Læs mere om os</Button>
-      </div>
-      <div class="md:flex md:justify-start md:pt-spacing-m hidden md:pl-0 md:mx-0">
-        <Button type="submit" variant="secondary" size="medium">Læs mere om os</Button>
-      </div>
-    </a>
 </section>
 
+
 <!-- Afsnit om Menuen + CTA -->
-<section class="udvalg bg-color-creme flex items-center justify-center flex-col-reverse md:flex-row md:space-x-spacing-7 pt-0 space-y-spacing-xl w-full h-full mx-auto md:h-[750px] md:pb-0">
+<section class="udvalg bg-color-creme flex items-center justify-center flex-col-reverse md:flex-row md:space-x-spacing-7 space-y-spacing-xl w-full h-full mx-auto md:h-[750px] md:pt-20 md:pb-40 pt-20">
   <!-- Tekst + CTA -->
   <div class="md:ml-20 md:w-2/5 w-4/5 order-2 md:order-1 md:pr-10 md:pt-0 pt-16">
     <h1 class="text-left text-44 mb-8 font-EBGaramond font-medium md:leading-56 leading-48 md:text-52 md:mt-0">
