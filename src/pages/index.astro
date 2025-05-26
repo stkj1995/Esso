@@ -71,11 +71,11 @@ const {variant= "primary" , size= "medium"} = Astro.props;
 
  <!-- Kort intro og billeder -->
 <section id="velkommen" class="intro flex flex-col-reverse md:flex-row py-0 px-0 md:pl-20 md:pt-40 pt-28 md:space-y-spacing-xl md:space-x-spacing-5xl items-center max-w-7xl mx-auto">
-  <div>
+  <div class="w-[380px] h-[380px] aspect-square md:h-[530px] md:w-[530px]">
     <Image
       src={ForsideKaffe}
       alt="en kaffe bliver lavet"
-      class="h-[380px] w-[380px] object-cover object-[40%_88%] rounded-border-radius-25 md:h-[530px] md:w-[530px] md:mt-20"
+      class="w-full h-full object-cover rounded-border-radius-25 md:w-full md:h-full  md:mt-20"
     />
   </div>
 
