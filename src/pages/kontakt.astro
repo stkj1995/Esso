@@ -12,69 +12,61 @@ const {variant= "primary" , size= "medium"} = Astro.props;
 
 <MainLayout title="Kontakt">
 <!-- Formular.astro -->
-<section class="formular px-spacing-m pt-spacing-6xl pb-spacing-4xl">
-  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-spacing-m md:gap-spacing-5xl items-start">
-    <!-- Venstre kolonne med tekst og formular -->
-    <div>
-      <h1 class="font-EBGaramond md:text-52 text-44 font-medium text-color-mørkebrun mb-spacing-s">
-        Vi vil gerne høre fra dig
-      </h1>
-      <p class="font-LivvicRegular text-18 text-color-mørkebrun mb-spacing-ml leading-28">
-        Uanset om du har spørgsmål, ris eller ros, så er du altid velkommen til at kontakte os. <br>
-        Udfyld blot kontaktformularen – så vender vi tilbage til dig så hurtigt vi kan.
-      </p>
+ <section class="formular px-spacing-m pt-spacing-6xl pb-spacing-4xl">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-spacing-m md:gap-spacing-5xl items-start">
 
- <form class="space-y-6">
-  <div>
-    <label for="navn" class="block text-color-mørkebrun mb-1">Navn</label>
-    <input
-      type="text"
-      id="navn"
-      name="navn"
-      class="w-full border-0 border-b border-color-mørkebrun bg-transparent focus:outline-none focus:ring-0 focus:border-color-lysebrun py-2"
-    />
-  </div>
+      <!-- Venstre kolonne -->
+      <div>
+        <h1 class="font-EBGaramond md:text-52 text-44 font-medium text-color-mørkebrun mb-spacing-s">
+          Vi vil gerne høre fra dig
+        </h1>
+        <p class="font-LivvicRegular text-18 text-color-mørkebrun mb-spacing-ml leading-28">
+          Uanset om du har spørgsmål, ris eller ros, så er du altid velkommen til at kontakte os. <br>
+          Udfyld blot kontaktformularen – så vender vi tilbage til dig så hurtigt vi kan.
+        </p>
 
-  <div>
-    <label for="email" class="block text-color-mørkebrun mb-1">Email</label>
-    <input
-      type="email"
-      id="email"
-      name="email"
-      class="w-full border-0 border-b border-color-mørkebrun bg-transparent focus:outline-none focus:ring-0 focus:border-color-lysebrun py-2"
-    />
-  </div>
+        <!-- Kontaktformular -->
+        <form class="space-y-6">
+          <div>
+            <label for="navn" class="block text-color-mørkebrun mb-1">Navn</label>
+            <input
+              type="text"
+              id="navn"
+              name="navn"
+              class="w-full border-0 border-b border-color-mørkebrun bg-transparent focus:outline-none focus:ring-0 focus:border-color-lysebrun py-2"
+            />
+          </div>
 
- <div>
-  <label for="besked" class="block text-color-mørkebrun mb-1">Besked</label>
-  <textarea
-    id="besked"
-    name="besked"
-    rows="6"
-    placeholder="Skriv din besked her..."
-    class="w-full border border-color-mørkebrun rounded-lg bg-transparent my-spacing-s-(mobil) p-3 focus:outline-none"
-  ></textarea>
-</div>
+          <div>
+            <label for="email" class="block text-color-mørkebrun mb-1">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="w-full border-0 border-b border-color-mørkebrun bg-transparent focus:outline-none focus:ring-0 focus:border-color-lysebrun py-2"
+            />
+          </div>
 
-</form>
+          <div>
+            <label for="besked" class="block text-color-mørkebrun mb-1">Besked</label>
+            <textarea
+              id="besked"
+              name="besked"
+              rows="6"
+              placeholder="Skriv din besked her..."
+              class="w-full border border-color-mørkebrun rounded-lg bg-transparent p-3 focus:outline-none"
+            ></textarea>
+          </div>
 
-   <!-- Flex-container omkring send-knappen -->
-    <div class="flex justify-center md:justify-start md:mt-spacing-xs mt-spacing-m">
-     <a href="/">
-         <div class="flex justify-center md:hidden">
-                  <Button  type="submit" variant="secondary", size="small" >Send</Button>
-                </div>
-                <!-- OBS: knap variant til desktop -->
-                <div class="md:flex md:justify-start md:pt-5 hidden md:pl-0 md:mx-0">
-                  <Button  type="submit" variant="secondary", size="medium" >Send</Button>
-                 </div>
-        </div>
-      </a>
-       </div> 
-      </form> 
+          <!-- Send-knap -->
+          <div class="flex justify-center md:justify-start pt-spacing-s">
+            <Button type="submit" variant="secondary" size="medium">Send</Button>
+          </div>
+        </form>
+      </div>
 
       <!-- Højre kolonne med billede -->
-    <div>
+      <div>
         <Image
           src={Kontakt1}
           alt="en kaffe bliver lavet"
@@ -82,8 +74,9 @@ const {variant= "primary" , size= "medium"} = Astro.props;
           class="h-[380px] w-[380px] object-cover object-[40%_88%] rounded-border-radius-25 md:h-[580px] md:w-[480px] md:mt-[70px] mt-spacing-2xl-(mobil)"
         />
       </div>
+
     </div>
-</section>
+  </section>
 
 <section class="info text-color-mørkebrun px-spacing-m py-0 md:relative left-[-20px] md:my-spacing-2xl mb-spacing-6xl-(mobil)">
   <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 md:gap-spacing-5xl gap-y-spacing-2xl-(mobil)">
