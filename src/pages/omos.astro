@@ -2,7 +2,6 @@
 // Importer nødvendige komponenter
 import MainLayout from "../layouts/MainLayout.astro";
 import Nyhedsbrev from "../components/Nyhedsbrev.astro";
-import Omoshero from '../assets/images/omoshero_ny.webp';
 import { Image } from 'astro:assets';
 import Button from '../components/Button.astro';
 import essofacadeny from '../assets/images/essofacade_ny.webp';
@@ -82,7 +81,7 @@ import events from '../assets/images/events.webp';
 
         <!-- husk at give rigtigt img lift mere i with  w-[450px] h-[450px] object-cover md:object-cover md:w-[520px]-->
         <div class="flex justify-center pt-spacing-xl-(mobil)">
-          <Image src={omosny} alt="billede af mælk der hældes i kaffe" class="rounded-border-radius-25  w-[350px] h-[350px] object-cover md:w-[500px] md:h-[450px] md:object-cover"/>
+          <Image src={omosny} alt="billede af kaffe der brygges og hældes i kaffekop" class="rounded-border-radius-25  w-[350px] h-[350px] object-cover md:w-[500px] md:h-[450px] md:object-cover"/>
     
         </div>
       </div>
@@ -99,7 +98,7 @@ import events from '../assets/images/events.webp';
                   <Image src={vin} alt="illustration af vinglas og vinflaske" class="w-24 md:w-36" />
                 </div>
                 <div class="pt-10 flex justify-start">
-                  <Image src={oliven} alt="illustration af oliven" class="w-32 md:w-48" />
+                  <Image src={oliven} alt="illustration af oliven og mandler" class="w-32 md:w-48" />
                 </div>
               </div>
               
@@ -157,27 +156,6 @@ import events from '../assets/images/events.webp';
                   <Image src={oel3} alt="billede af to ølflasker" class="rounded-border-radius-25 w-[210px] h-[310px] object-cover md:w-[300px] md:h-[450px] md:object-cover md:mt-[110px] mt-[80px]"/>
                 </div>
          </div>
-
-           <!-- <div class="flex space-x-spacing-sm md:w-[580px] w-full justify-center">
-    <Image
-      src={}
-      alt="en kaffe bliver lavet"
-      class="h-[200px] w-[140px] md:h-[250px] md:w-[180px] object-cover object-[60%_115%] rounded-border-radius-25 md:mt-[200px] mt-[80px]"
-    />
-    <Image
-      src={}
-      alt="interiør af café"
-      class="h-[290px] w-[200px] md:h-[430px] md:w-[300px] object-cover object-[60%_115%] rounded-border-radius-25 md:mt-[100px] mt-[40px] mb-spacing-4xl"
-    />
-  </div> -->
-              
-              
-        <!-- kode fra index tilpaset til billeder af øl flasker - vent med at slette  -->
-        <!-- <div class="flex space-x-6 md:w-[580px] w-full justify-center pt-spacing-4xl-(mobil) md:space-x-spacing-sm md:pt-0 md:">
-            <Image
-              src={keld_bryg} alt="billede af grå øldåse" class="h-[15%] w-[30%] object-cover object-[60%_115%] rounded-border-radius-25 md:h-[250px] md:w-[180px] md:mt-[350px] mt-spacing-2xl-(mobil) " />
-            <Image src={oel3} alt="billede af to ølflasker" class="h-[30%] w-[45%] mt-[-0px] object-cover object-[60%_115%] rounded-border-radius-25 md:h-[420px] md:w-[300px] md:mt-[250px] md:mb-spacing-6xl mb-spacing-5xl-(mobil)"/>
-          </div> -->
          
         </div>
       </section>
